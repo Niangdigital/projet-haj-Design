@@ -25,8 +25,8 @@
 import { onMounted } from 'vue';
 import { useNavigationStore } from './stores/navigationStore.js';
 import { usePortfolioStore } from './stores/portfolioStore.js';
-import Header from './components/layout/Header.vue';
-import Footer from './components/layout/Footer.vue';
+import Header from './components/Layout/Header.vue';
+import Footer from './components/Layout/Footer.vue';
 import HomePage from './components/pages/HomePage.vue';
 import PortfolioPage from './components/pages/PortfolioPage.vue';
 import AboutPage from './components/pages/AboutPage.vue';
