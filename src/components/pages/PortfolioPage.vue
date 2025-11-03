@@ -25,12 +25,6 @@
               :class="{ active: portfolio.activeFilter === cat }"
               class="filter-button">
               {{ cat.charAt(0).toUpperCase() + cat.slice(1) }}
-              <span class="filter-count" v-if="cat !== 'tous'">
-                {{ getProjectCount(cat) }}
-              </span>
-              <span class="filter-count" v-else>
-                {{ portfolio.projects.length }}
-              </span>
             </button>
           </div>
           
@@ -130,7 +124,7 @@ const getProjectCount = (category) => {
 /* HERO ÉPURÉ */
 .portfolio-hero {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  padding: 6rem 1rem 4rem;
+  padding: 7.5rem 1rem 7.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -155,7 +149,7 @@ const getProjectCount = (category) => {
 
 .section-label {
   color: #60a5fa;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -165,7 +159,7 @@ const getProjectCount = (category) => {
 
 .portfolio-hero h1 {
   color: var(--white);
-  font-size: 3rem;
+  font-size: var(--text-hero);
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.1;
@@ -173,7 +167,7 @@ const getProjectCount = (category) => {
 
 .hero-description {
   color: #cbd5e1;
-  font-size: 1.125rem;
+  font-size: var(--text-body-lg);
   line-height: 1.7;
   font-weight: 300;
 }
@@ -193,6 +187,7 @@ const getProjectCount = (category) => {
 .container {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .filters-wrapper {
@@ -210,10 +205,10 @@ const getProjectCount = (category) => {
 }
 
 .filter-button {
-  padding: 0.625rem 1.25rem;
+  padding: var(--btn-padding-sm);
   border-radius: 50px;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: var(--text-body);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--bg-lighter);
   color: var(--text-light);
@@ -221,7 +216,7 @@ const getProjectCount = (category) => {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.375rem;
   position: relative;
 }
 
@@ -258,7 +253,7 @@ const getProjectCount = (category) => {
 
 /* GRILLE DE PROJETS */
 .portfolio-grid-section {
-  padding: 4rem 1rem 6rem;
+  padding: 2.5rem 1rem 10rem;
   background-color: var(--bg-lighter);
   min-height: 60vh;
 }
@@ -272,7 +267,7 @@ const getProjectCount = (category) => {
 
 .project-card {
   background: var(--white);
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -384,7 +379,7 @@ const getProjectCount = (category) => {
 }
 
 .card-details {
-  font-size: 0.8125rem;
+  font-size: var(--text-body-sm);
   color: var(--text-light);
   font-weight: 500;
 }
@@ -394,7 +389,7 @@ const getProjectCount = (category) => {
   align-items: center;
   gap: 0.5rem;
   color: var(--text-dark);
-  font-size: 0.875rem;
+  font-size: var(--text-body-sm);
   font-weight: 600;
   transition: all 0.3s ease;
 }

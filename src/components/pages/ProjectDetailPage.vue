@@ -288,16 +288,16 @@ const extractImageUrl = (imageString) => {
   backdrop-filter: blur(12px);
   color: #1A1A1A;
   border: none;
-  padding: 0.875rem 1.75rem;
-  border-radius: 50px;
-  font-size: 0.9375rem;
+  padding: var(--btn-padding-sm);
+  border-radius: var(--btn-radius);
+  font-size: var(--text-body-sm);
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.375rem;
 }
 
 .back-button-fixed:hover {
@@ -347,14 +347,14 @@ const extractImageUrl = (imageString) => {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .project-title {
   color: var(--white);
-  font-size: 3.5rem;
+  font-size: var(--text-hero);
   font-weight: 600;
   margin-bottom: 1rem;
   line-height: 1.15;
@@ -363,7 +363,7 @@ const extractImageUrl = (imageString) => {
 
 .project-subtitle {
   color: rgba(255, 255, 255, 0.95);
-  font-size: 1.25rem;
+  font-size: var(--text-body-lg);
   font-weight: 400;
   line-height: 1.6;
   max-width: 700px;
@@ -373,7 +373,7 @@ const extractImageUrl = (imageString) => {
    PROJECT INFO SECTION
    ============================================ */
 .project-info {
-  padding: 5rem 0;
+  padding: 8rem 0;
 }
 
 .info-grid {
@@ -385,18 +385,18 @@ const extractImageUrl = (imageString) => {
 .info-main {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
 }
 
 .info-section {
   background-color: var(--white);
   padding: 3rem;
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: var(--text-h1);
   font-weight: 600;
   color: #1A1A1A;
   margin-bottom: 2rem;
@@ -404,14 +404,14 @@ const extractImageUrl = (imageString) => {
 }
 
 .description-text {
-  font-size: 1.125rem;
+  font-size: var(--text-body-lg);
   color: #333;
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
 
 .description-secondary {
-  font-size: 1rem;
+  font-size: var(--text-body);
   color: #666;
   line-height: 1.8;
 }
@@ -431,7 +431,7 @@ const extractImageUrl = (imageString) => {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, var(--primary), rgba(0,0,0,0.1));
+  background: linear-gradient(to bottom, var(--text-dark), rgba(0,0,0,0.1));
 }
 
 .timeline-item {
@@ -449,28 +449,28 @@ const extractImageUrl = (imageString) => {
   top: 0.375rem;
   width: 0.875rem;
   height: 0.875rem;
-  background-color: var(--primary);
+  background-color: var(--text-dark);
   border: 3px solid var(--white);
   border-radius: 50%;
   box-shadow: 0 0 0 4px #F5F5F5;
 }
 
 .timeline-title {
-  font-size: 1.125rem;
+  font-size: var(--text-body-lg);
   font-weight: 600;
   color: #1A1A1A;
   margin-bottom: 0.5rem;
 }
 
 .timeline-date {
-  font-size: 0.875rem;
+  font-size: var(--text-body-sm);
   color: var(--primary);
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
 
 .timeline-desc {
-  font-size: 0.9375rem;
+  font-size: var(--text-body);
   color: #666;
   line-height: 1.7;
 }
@@ -488,7 +488,7 @@ const extractImageUrl = (imageString) => {
   aspect-ratio: 4 / 3;
   background-size: cover;
   background-position: center;
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -508,7 +508,7 @@ const extractImageUrl = (imageString) => {
   background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
   padding: 2.5rem;
   border-radius: 20px;
-  border-left: 4px solid var(--primary);
+  border-left: 3px solid var(--Text-ligh);
 }
 
 .testimonial-icon {
@@ -519,7 +519,7 @@ const extractImageUrl = (imageString) => {
 }
 
 .testimonial-text {
-  font-size: 1.125rem;
+  font-size: var(--text-body-lg);
   color: #333;
   line-height: 1.8;
   font-style: italic;
@@ -533,13 +533,13 @@ const extractImageUrl = (imageString) => {
 }
 
 .testimonial-author strong {
-  font-size: 1rem;
+  font-size: var(--text-body);
   color: #1A1A1A;
   font-weight: 600;
 }
 
 .testimonial-author span {
-  font-size: 0.875rem;
+  font-size: var(--text-body-sm);
   color: #999;
 }
 
@@ -560,11 +560,10 @@ const extractImageUrl = (imageString) => {
 }
 
 .sidebar-title {
-  font-size: 1rem;
+  font-size: var(--text-h3);
   font-weight: 600;
   color: #1A1A1A;
   margin-bottom: 1.5rem;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
@@ -595,7 +594,7 @@ const extractImageUrl = (imageString) => {
 }
 
 .detail-value {
-  font-size: 0.9375rem;
+  font-size: var(--text-body-lg);
   color: #1A1A1A;
   font-weight: 600;
   text-align: right;
@@ -630,13 +629,13 @@ const extractImageUrl = (imageString) => {
 
 .cta-title {
   color: var(--text-dark);
-  font-size: 1.125rem;
+  font-size: var(--text-h3);
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
 
 .cta-description {
-  font-size: 0.9375rem;
+  font-size: var(--text-body-lg);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   opacity: 0.9;
@@ -646,10 +645,10 @@ const extractImageUrl = (imageString) => {
   width: 100%;
   background-color: var(--primary);
   color: var(--white);
-  padding: 1rem;
-  border-radius: 50px;
+  padding: var(--btn-padding-md);
+  border-radius: var(--btn-radius);
   font-weight: 600;
-  font-size: 0.9375rem;
+  font-size: var(--text-body);
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
@@ -670,12 +669,12 @@ const extractImageUrl = (imageString) => {
    RELATED PROJECTS
    ============================================ */
 .related-projects {
-  padding: 5rem 0;
+  padding: 8rem 0 10rem;
   background-color: var(--white);
 }
 
 .section-title-center {
-  font-size: 2rem;
+  font-size: var(--text-h1);
   font-weight: 600;
   color: #1A1A1A;
   text-align: center;
@@ -691,7 +690,7 @@ const extractImageUrl = (imageString) => {
 
 .project-card {
   background: #FAFAFA;
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   cursor: pointer;
   transition: all 0.4s ease;
@@ -726,16 +725,16 @@ const extractImageUrl = (imageString) => {
 
 .card-category {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: var(--text-small);
   font-weight: 700;
-  color: var(--primary);
+  color: var(--text-lighter);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.5rem;
 }
 
 .card-title {
-  font-size: 1.25rem;
+  font-size: var(--text-body-lg);
   font-weight: 600;
   color: #1A1A1A;
   line-height: 1.3;
@@ -756,7 +755,7 @@ const extractImageUrl = (imageString) => {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.875rem;
+  font-size: var(--text-body-sm);
   font-weight: 600;
   color: #666;
   transition: all 0.3s ease;

@@ -86,7 +86,7 @@
     <section class="contact-content">
       <div class="container">
         <div class="content-header">
-          <p class="section-label">Restons connectés</p>
+          <p class="section-label1">Restons connectés</p>
           <h2>Envoyez-nous un message</h2>
           <p class="section-description">Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais</p>
         </div>
@@ -148,7 +148,7 @@ const contact = useContactStore();
 .contact-hero {
   background: linear-gradient(to bottom, #0f172a, #1e293b);
   color: var(--white);
-  padding: 7.5rem 1rem 4rem;
+  padding: 7.5rem 1rem 3rem;
   position: relative;
   overflow: hidden;
 }
@@ -165,8 +165,7 @@ const contact = useContactStore();
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
+  padding: 0 1rem;
 }
 
 .hero-content {
@@ -176,25 +175,26 @@ const contact = useContactStore();
 }
 
 .section-label {
-  color: #60a5fa;
-  font-size: 0.875rem;
+   color: #60a5fa;
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  display: inline-block;
+  display: block;
+
 }
 
 .contact-hero h1 {
   color: var(--white);
   font-size: 3.5rem;
   line-height: 1.2;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1rem 0;
   font-weight: 700;
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  background: var(--white);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -202,7 +202,7 @@ const contact = useContactStore();
 
 .hero-subtitle {
   color: #cbd5e1;
-  font-size: 1.125rem;
+  font-size: var(--text-body-lg);
   font-weight: 300;
   line-height: 1.7;
   margin-bottom: 3rem;
@@ -218,7 +218,7 @@ const contact = useContactStore();
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 1rem;
+  border-radius: var(--radius-lg);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -253,14 +253,14 @@ const contact = useContactStore();
 }
 
 .card-label {
-  font-size: 0.8125rem;
+  font-size: var(--text-body);
   color: #94a3b8;
   font-weight: 400;
   margin-bottom: 0.25rem;
 }
 
 .card-value {
-  font-size: 0.8125rem;
+  font-size: var(--text-body-sm);
   color: var(--white);
   font-weight: 500;
   line-height: 1.5;
@@ -282,7 +282,7 @@ const contact = useContactStore();
 }
 
 .social-content h3 {
-  font-size: 1rem;
+  font-size: var(--text-body-lg);
   font-weight: 600;
   color: var(--text-dark);
   margin: 0;
@@ -298,7 +298,7 @@ const contact = useContactStore();
   height: 2.75rem;
   background-color: var(--bg-lighter);
   color: var(--text-light);
-  border-radius: var(--radius-lg);
+  border-radius: 0.85rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -344,16 +344,25 @@ const contact = useContactStore();
   flex-shrink: 0;
 }
 
+.section-label1 {
+  color: var(--secondary);
+  font-size: var(--text-small);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
 .cta-text h2 {
   color: var(--text-dark);
   margin-bottom: 0.5rem;
-  font-size: 1.5rem;
+  font-size: var(--text-h2);
 }
 
 .cta-text p {
   color: var(--text-light);
   font-weight: 300;
-  font-size: 0.9375rem;
+  font-size: var(--text-body-lg);
 }
 
 .cta-button {
@@ -362,8 +371,8 @@ const contact = useContactStore();
   gap: 0.5rem;
   background-color: var(--primary);
   color: var(--white);
-  padding: 1rem 2rem;
-  border-radius: var(--radius-lg);
+   padding: var(--btn-padding-md);
+  border-radius: var(--btn-radius);
   text-decoration: none;
   transition: all 0.3s ease;
   font-weight: 500;
@@ -377,7 +386,7 @@ const contact = useContactStore();
 }
 
 .contact-content {
-  padding: 5rem 1rem 6rem;
+  padding: 8rem 0rem 10rem;
   background-color: var(--white);
 }
 
@@ -389,13 +398,13 @@ const contact = useContactStore();
 
 .content-header h2 {
   color: var(--text-dark);
-  font-size: 2.5rem;
+  font-size: var(--text-h1);
   margin-bottom: 1rem;
 }
 
 .section-description {
   color: var(--text-light);
-  font-size: 1.0625rem;
+  font-size: var(--text-body-lg);
   font-weight: 300;
   line-height: 1.6;
 }
@@ -467,7 +476,7 @@ const contact = useContactStore();
   border: 1px solid var(--border);
   padding: 1rem;
   border-radius: var(--radius-lg);
-  font-size: 1rem;
+  font-size: var(--text-body);
   font-family: inherit;
   transition: border-color 0.3s ease;
   color: var(--text-dark);
@@ -492,12 +501,12 @@ textarea.form-input {
   background-color: var(--primary);
   color: var(--white);
   padding: 1rem;
-  border-radius: var(--radius-lg);
+  border-radius: var(--btn-radius);
   font-weight: 500;
   transition: all 0.3s ease;
   cursor: pointer;
   border: none;
-  font-size: 1rem;
+  font-size: var(--text-body-lg);
 }
 
 .form-button:hover:not(:disabled) {
@@ -511,7 +520,7 @@ textarea.form-input {
 }
 
 .form-note {
-  font-size: 0.75rem;
+  font-size: var(--text-small);
   color: var(--secondary);
   text-align: center;
   margin-top: 1rem;

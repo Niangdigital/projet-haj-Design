@@ -8,14 +8,14 @@
           <p class="hero-subtitle">Bienvenue chez HAJ Design</p>
         </div>
         <h1 class="hero-title" style="animation-delay: 0.4s">
-         Plus qu'un design une nouvelle <span class="highlight">expérience pour vos futurs clients</span>
+         Plus qu'un design une nouvelle expérience <span class="highlight">pour vos futurs clients</span>
         </h1>
         <p class="hero-description" style="animation-delay: 0.6s">
           Construction — Design d'Intérieur — Architecture — Maçonnerie
         </p>
-        <button @click="nav.setPage('portfolio')" class="button-primary" style="animation-delay: 0.8s">
+        <button @click="nav.setPage('portfolio')" class="btn btn-primary btn-lg" style="animation-delay: 0.8s">
           Découvrir nos projets
-          <span class="arrow">→</span>
+          <span class="btn-arrow">→</span>
         </button>
       </div>
     </section>
@@ -34,7 +34,7 @@
             :style="{ perspective: '2000px' }"
           >
             <div 
-                v-for="(project, index) in portfolio.carouselProjects" 
+              v-for="(project, index) in portfolio.carouselProjects" 
               :key="project.id"
               class="carousel-card"
               :class="{ 'is-centered': isCardCentered(index) }"
@@ -78,7 +78,7 @@
               <!-- BOUTON CTA (visible uniquement sur carte centrale) -->
               <transition name="slide-up">
                 <div v-if="isCardCentered(index)" class="card-cta">
-                  <button class="btn-view-project" @click.stop="viewProject(project.id)">
+                  <button class="btn btn-white btn-md" @click.stop="viewProject(project.id)">
                     Voir le projet complet
                     <span class="btn-arrow">→</span>
                   </button>
@@ -112,7 +112,7 @@
           <!-- Progress dots -->
           <div class="progress-dots">
             <button
-                  v-for="(project, index) in portfolio.carouselProjects"
+              v-for="(project, index) in portfolio.carouselProjects"
               :key="project.id"
               @click="jumpToCard(index)"
               class="progress-dot"
@@ -131,8 +131,8 @@
         <!-- PROJECTS GRID -->
         <div class="projects-grid-section">
           <div class="section-header-grid">
-          <h2>Nos dernières réalisations</h2>
-        <p class="section-description">Découvrez une sélection de nos projets phares.</p>
+            <h2>Nos dernières réalisations</h2>
+            <p class="section-description">Découvrez une sélection de nos projets phares.</p>
           </div>
           
           <div class="projects-grid">
@@ -165,7 +165,7 @@
           </div>
 
           <div class="section-cta">
-            <button @click="nav.setPage('portfolio')" class="button-secondary">
+            <button @click="nav.setPage('portfolio')" class="btn btn-primary btn-lg">
               Voir le catalogue complet →
             </button>
           </div>
@@ -232,11 +232,11 @@
 
             <!-- CTA BUTTONS -->
             <div class="trust-cta-group">
-              <button @click="nav.setPage('contact')" class="trust-cta trust-cta-primary">
+              <button @click="nav.setPage('contact')" class="btn btn-secondary btn-md">
                 Discuter de mon projet
-                <span class="cta-arrow">→</span>
+                <span class="btn-arrow">→</span>
               </button>
-              <button @click="nav.setPage('about')" class="trust-cta trust-cta-secondary">
+              <button @click="nav.setPage('about')" class="btn btn-outline btn-md">
                 En savoir plus
               </button>
             </div>
@@ -397,7 +397,6 @@ const viewProject = (projectId) => {
 
 const extractImageUrl = (imageString) => {
   if (!imageString) return '';
-  // Extrait l'URL depuis "url(...)" ou retourne directement si c'est déjà une URL
   const urlMatch = imageString.match(/url\(['"]?([^'"]+)['"]?\)/);
   return urlMatch ? urlMatch[1] : imageString;
 };
@@ -408,9 +407,9 @@ const startImageRotation = () => {
   imageTimer = setInterval(() => {
     if (!isScaleAnimationComplete.value || isPaused.value || isHoveredCentered.value) return;
 
-     const currentProject = portfolio.carouselProjects[centerIndex.value];
-     const images = getProjectImages(currentProject);
-     const currentImageIndex = currentImageIndexes.value[centerIndex.value];
+    const currentProject = portfolio.carouselProjects[centerIndex.value];
+    const images = getProjectImages(currentProject);
+    const currentImageIndex = currentImageIndexes.value[centerIndex.value];
 
     if (currentImageIndex < images.length - 1) {
       currentImageIndexes.value[centerIndex.value]++;
@@ -529,11 +528,11 @@ onUnmounted(() => {
 /* HERO SECTION */
 .hero {
   position: relative;
-  min-height: 70vh;
+  /* min-height: 70vh; */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem;
+  padding: 7rem 12rem;
   overflow: hidden;
 }
 
@@ -570,13 +569,13 @@ onUnmounted(() => {
 }
 
 .hero-content {
-  max-width: 56rem;
   text-align: center;
   position: relative;
   z-index: 10;
 }
 
 .hero-text {
+  
   margin-bottom: 2rem;
   animation: fadeIn 0.8s ease-out forwards;
   opacity: 0;
@@ -595,17 +594,20 @@ onUnmounted(() => {
 
 .hero-subtitle {
   color: var(--white);
-  font-size: 0.75rem;
+  font-size: var(--text-small);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .hero-title {
+  /*max-width: 1280px;*/
   margin-bottom: 2rem;
   animation: fadeIn 0.8s ease-out forwards;
   opacity: 0;
-  color: var(--bg-lighter );
+  color: var(--bg-lighter);
+  font-size: var(--text-hero);
+  line-height: var(--line-height-tight);
 }
 
 .highlight {
@@ -614,47 +616,17 @@ onUnmounted(() => {
 }
 
 .hero-description {
-  font-size: 1.125rem;
+  font-size: var(--text-body-lg);
   color: var(--bg-lighter);
   margin-bottom: 3.5rem;
   animation: fadeIn 0.8s ease-out forwards;
   opacity: 0;
 }
 
-.button-primary {
-  background-color: var(--primary);
-  color: var(--white);
-  padding: 1rem 2rem;
-  border-radius: var(--radius-lg);
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  animation: fadeIn 0.8s ease-out forwards;
-  opacity: 0;
-  border: none;
-  cursor: pointer;
-}
-
-.button-primary:hover {
-  background-color: var(--primary-dark);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
-}
-
-.arrow {
-  transition: transform 0.3s ease;
-}
-
-.button-primary:hover .arrow {
-  transform: translateX(4px);
-}
 
 /* FEATURED PROJECTS - CARROUSEL */
 .featured-projects {
-  padding: 4rem 0 10rem;
+  padding: 2rem 0rem 10rem;
   background-color: var(--white);
 }
 
@@ -666,27 +638,29 @@ onUnmounted(() => {
 
 .section-header {
   margin-bottom: 0rem;
-  
 }
 
 .section-label {
   color: var(--text-light);
-  font-size: 0.75rem;
+  font-size: var(--text-small);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 1rem;
+  display: block;
 }
 
 .section-header h2 {
   color: var(--text-dark);
   margin-bottom: 1rem;
+  font-size: var(--text-h1);
 }
 
 .section-description {
   color: var(--text-light);
   font-weight: 300;
   max-width: 42rem;
+  font-size: var(--text-body-lg);
 }
 
 .section-divider {
@@ -704,7 +678,8 @@ onUnmounted(() => {
 
 .carousel-3d {
   position: relative;
-  height: 600px;
+  width: 100%;
+  height: 540px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -766,7 +741,7 @@ onUnmounted(() => {
   color: white;
   padding: 8px 16px;
   border-radius: 20px;
-  font-size: 0.875rem;
+  font-size: var(--text-body-sm);
   font-weight: 500;
   z-index: 2;
 }
@@ -784,7 +759,7 @@ onUnmounted(() => {
 }
 
 .card-category {
-  font-size: 0.75rem;
+  font-size: var(--text-small);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -794,14 +769,14 @@ onUnmounted(() => {
 }
 
 .card-title {
-  font-size: 1.5rem;
+  font-size: var(--text-h3);
   font-weight: 600;
   margin-bottom: 0.5rem;
   line-height: 1.3;
 }
 
 .card-description {
-  font-size: 0.875rem;
+  font-size: var(--text-body-sm);
   opacity: 0.9;
   line-height: 1.5;
 }
@@ -817,37 +792,6 @@ onUnmounted(() => {
   justify-content: center;
   align-items: center;
   z-index: 2;
-}
-
-.btn-view-project {
-  background: white;
-  color: var(--text-dark);
-  padding: 1.25rem 2.5rem;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.btn-view-project:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-  background: var(--primary);
-  color: white;
-}
-
-.btn-arrow {
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn-view-project:hover .btn-arrow {
-  transform: translateX(8px);
 }
 
 /* NAVIGATION ARROWS */
@@ -947,7 +891,7 @@ onUnmounted(() => {
 
 /* PROJECTS GRID SECTION */
 .projects-grid-section {
-  padding: 6rem 0 0;
+  padding: 8rem 0 0;
 }
 
 .section-header-grid {
@@ -958,26 +902,17 @@ onUnmounted(() => {
   margin-right: auto;
 }
 
-.section-header-grid .section-label {
-  color: var(--text-light);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.grid-title {
-  font-size: 2.5rem;
+.section-header-grid h2 {
+  font-size: var(--text-h1);
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
-.grid-description {
+.section-header-grid .section-description {
   color: var(--text-light);
-  font-size: 1.125rem;
+  font-size: var(--text-body-lg);
   font-weight: 300;
   line-height: 1.6;
 }
@@ -987,11 +922,11 @@ onUnmounted(() => {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2.5rem;
   margin-bottom: 3rem;
-  padding: 0 2rem;
+  padding: 0;
 }
 
 .project-card {
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   background-color: var(--white);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -1036,7 +971,7 @@ onUnmounted(() => {
 }
 
 .project-category {
-  font-size: 0.75rem;
+  font-size: var(--text-small);
   font-weight: 700;
   color: var(--text-light);
   text-transform: uppercase;
@@ -1045,7 +980,7 @@ onUnmounted(() => {
 }
 
 .project-card h3 {
-  font-size: 1.125rem;
+  font-size: var(--text-body-lg);
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 0.75rem;
@@ -1058,7 +993,7 @@ onUnmounted(() => {
 }
 
 .project-card p {
-  font-size: 0.875rem;
+  font-size: var(--text-body-sm);
   color: var(--text-light);
   margin-bottom: 1rem;
   flex-grow: 1;
@@ -1079,7 +1014,7 @@ onUnmounted(() => {
 }
 
 .project-details p {
-  font-size: 0.75rem;
+  font-size: var(--text-body-sm);
   color: var(--text-light);
   margin: 0;
   font-weight: 500;
@@ -1170,25 +1105,9 @@ onUnmounted(() => {
   padding-top: 2rem;
 }
 
-.button-secondary {
-  background-color: var(--primary);
-  color: var(--white);
-  padding: 0.75rem 2rem;
-  border-radius: var(--radius-lg);
-  font-size: 0.875rem;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.button-secondary:hover {
-  background-color: var(--primary-dark);
-  transform: translateY(-2px);
-}
-
 /* TRUST SECTION - POURQUOI NOUS FAIRE CONFIANCE */
 .trust-section {
-  padding: 8rem 0;
+  padding: 10rem 0;
   background-color: var(--bg-lighter);
 }
 
@@ -1206,7 +1125,7 @@ onUnmounted(() => {
 
 .trust-label {
   color: var(--primary);
-  font-size: 0.875rem;
+  font-size: var(--text-small);
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -1215,7 +1134,7 @@ onUnmounted(() => {
 }
 
 .trust-title {
-  font-size: 2.5rem;
+  font-size: var(--text-h1);
   font-weight: 600;
   color: var(--text-dark);
   line-height: 1.2;
@@ -1223,7 +1142,7 @@ onUnmounted(() => {
 }
 
 .trust-description {
-  font-size: 1.0625rem;
+  font-size: var(--text-body-lg);
   line-height: 1.7;
   color: var(--text-light);
   margin-bottom: 3rem;
@@ -1270,14 +1189,14 @@ onUnmounted(() => {
 }
 
 .service-text h4 {
-  font-size: 1rem;
+  font-size: var(--text-body);
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 0.25rem;
 }
 
 .service-text p {
-  font-size: 0.9375rem;
+  font-size: var(--text-body-sm);
   color: var(--text-light);
   line-height: 1.5;
 }
@@ -1289,51 +1208,6 @@ onUnmounted(() => {
   flex-wrap: wrap;
 }
 
-.trust-cta {
-  padding: 0.875rem 1.75rem;
-  border-radius: 50px;
-  font-weight: 500;
-  font-size: 0.9375rem;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all 0.3s ease;
-}
-
-.trust-cta-primary {
-  background-color: var(--text-dark);
-  color: var(--white);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.trust-cta-primary:hover {
-  background-color: var(--primary);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.trust-cta-secondary {
-  background-color: transparent;
-  color: var(--text-dark);
-  border: 1.5px solid var(--text-dark);
-}
-
-.trust-cta-secondary:hover {
-  background-color: var(--text-dark);
-  color: var(--white);
-  transform: translateY(-2px);
-}
-
-.cta-arrow {
-  transition: transform 0.3s ease;
-}
-
-.trust-cta-primary:hover .cta-arrow {
-  transform: translateX(4px);
-}
-
 /* RIGHT SIDE - COMPACT STATS */
 .trust-stats {
   display: flex;
@@ -1343,7 +1217,7 @@ onUnmounted(() => {
 
 .stats-compact {
   background: var(--white);
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   padding: 2.5rem;
   display: flex;
   justify-content: space-around;
@@ -1357,7 +1231,7 @@ onUnmounted(() => {
 }
 
 .stat-compact-number {
-  font-size: 2.75rem;
+  font-size: var(--text-stat);
   font-weight: 600;
   color: var(--text-dark);
   line-height: 1;
@@ -1372,7 +1246,7 @@ onUnmounted(() => {
 }
 
 .stat-compact-item p {
-  font-size: 0.875rem;
+  font-size: var(--text-body-sm);
   color: var(--text-light);
   font-weight: 400;
 }
@@ -1386,7 +1260,7 @@ onUnmounted(() => {
 /* TRUST BADGE */
 .trust-badge {
   background: var(--white);
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   padding: 1.5rem 2rem;
   display: flex;
   align-items: center;
@@ -1400,7 +1274,7 @@ onUnmounted(() => {
 }
 
 .trust-badge span {
-  font-size: 0.9375rem;
+  font-size: var(--text-body-sm);
   font-weight: 600;
   color: var(--text-dark);
 }
@@ -1410,14 +1284,6 @@ onUnmounted(() => {
   .hero {
     min-height: auto;
     padding: 4rem 1rem;
-  }
-
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-description {
-    font-size: 1rem;
   }
 
   .featured-projects,
@@ -1457,32 +1323,6 @@ onUnmounted(() => {
     right: 15px;
   }
 
-  .stats-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .stat-item {
-    text-align: center;
-  }
-
-  .stat-number {
-    font-size: 2.6rem;
-  }
-
-  .stats-cta-buttons {
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-  }
-
-  .button-secondary-outline,
-  .button-primary {
-    width: 100%;
-    justify-content: center;
-  }
-
   /* TRUST SECTION RESPONSIVE */
   .trust-section {
     padding: 5rem 0;
@@ -1495,14 +1335,6 @@ onUnmounted(() => {
 
   .trust-text {
     max-width: 100%;
-  }
-
-  .trust-title {
-    font-size: 1.875rem;
-  }
-
-  .trust-description {
-    font-size: 1rem;
   }
 
   .trust-services {
@@ -1523,11 +1355,6 @@ onUnmounted(() => {
     flex-direction: column;
   }
 
-  .trust-cta {
-    width: 100%;
-    justify-content: center;
-  }
-
   .trust-stats {
     gap: 1.5rem;
   }
@@ -1543,10 +1370,6 @@ onUnmounted(() => {
     height: 1px;
   }
 
-  .stat-compact-number {
-    font-size: 2.5rem;
-  }
-
   .trust-badge {
     padding: 1.25rem 1.5rem;
   }
@@ -1560,15 +1383,9 @@ onUnmounted(() => {
     width: 28px;
     height: 28px;
   }
-
   .progress-nav-btn svg {
     width: 12px;
     height: 12px;
-  }
-
-  .btn-view-project {
-    padding: 1rem 2rem;
-    font-size: 0.875rem;
   }
 
   .card-cta {
@@ -1584,14 +1401,6 @@ onUnmounted(() => {
   .section-header-grid {
     margin-bottom: 3rem;
     padding: 0 1rem;
-  }
-
-  .grid-title {
-    font-size: 1.75rem;
-  }
-
-  .grid-description {
-    font-size: 1rem;
   }
 
   .projects-grid {

@@ -5,7 +5,7 @@
       <div class="container">
         <div class="hero-content">
           <p class="section-label">À Propos</p>
-          <h1>H Design</h1>
+          <h1>HAJ Design</h1>
           <p class="hero-subtitle">Excellence & Innovation depuis 15 ans</p>
         </div>
       </div>
@@ -154,14 +154,14 @@ const services = [
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 /* Hero Section */
 .about-hero {
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%), 
               url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070') center/cover no-repeat;
   color: white;
-  padding: 10rem 2rem 8rem;
+  padding: 7.5rem 1rem 7.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -185,24 +185,23 @@ const services = [
 
 .section-label {
   color: #60a5fa;
-  font-size: 0.875rem;
+  font-size: var(--text-small);
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  display: inline-block;
+  margin-bottom: 1rem;
+  display: block;
 }
 
 .about-hero h1 {
-  font-size: 4.5rem;
+  font-size: var(--text-hero);
   font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: white;
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: var(--text-body-lg);
   font-weight: 300;
   color: #cbd5e1;
   letter-spacing: 0.01em;
@@ -210,7 +209,7 @@ const services = [
 
 /* Story Section */
 .about-story {
-  padding: 8rem 2rem;
+  padding: 8rem 0rem 8rem;
   background: white;
 }
 
@@ -229,7 +228,7 @@ const services = [
 }
 
 .story-header h2 {
-  font-size: 2.5rem;
+  font-size: var(--text-h1);
   font-weight: 600;
   color: var(--text-dark);
   margin-top: 0.5rem;
@@ -245,14 +244,14 @@ const services = [
 
 .story-text p {
   color: var(--text-light);
-  font-size: 1.125rem;
+  font-size: var(--text-body-lg);
   line-height: 1.8;
   font-weight: 300;
 }
 
 /* Stats Section */
 .about-stats {
-  padding: 6rem 2rem;
+  padding:5rem 0rem 5rem;
   background: var(--text-dark);
 }
 
@@ -270,7 +269,7 @@ const services = [
 }
 
 .stat-number {
-  font-size: 3.5rem;
+  font-size: var(--text-h1);
   font-weight: 300;
   color: white;
   margin-bottom: 1rem;
@@ -284,7 +283,7 @@ const services = [
 }
 
 .stat-label {
-  font-size: 1rem;
+  font-size: var(--text-body);
   color: #cbd5e1;
   font-weight: 300;
   letter-spacing: 0.02em;
@@ -292,7 +291,7 @@ const services = [
 
 /* Values Section */
 .about-values {
-  padding: 8rem 2rem;
+  padding: 8rem 0rem 10rem;
   background: var(--bg-lighter);
 }
 
@@ -306,7 +305,7 @@ const services = [
 }
 
 .values-header h2 {
-  font-size: 2.5rem;
+  font-size: var(--text-h1);
   font-weight: 600;
   color: var(--text-dark);
   margin-top: 0.5rem;
@@ -322,7 +321,7 @@ const services = [
 .value-card {
   background: white;
   padding: 3rem 2.5rem;
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   transition: all 0.4s ease;
   border: 1px solid var(--border);
 }
@@ -334,7 +333,7 @@ const services = [
 }
 
 .value-number {
-  font-size: 3rem;
+  font-size: var(--text-h1);
   font-weight: 300;
   color: #dbeafe;
   margin-bottom: 1.5rem;
@@ -342,7 +341,7 @@ const services = [
 }
 
 .value-content h3 {
-  font-size: 1.5rem;
+  font-size: var(--text-h3);
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 1rem;
@@ -353,12 +352,12 @@ const services = [
   color: var(--text-light);
   font-weight: 300;
   line-height: 1.7;
-  font-size: 1rem;
+  font-size: var(--text-body-lg);
 }
 
 /* Services Section */
 .about-services {
-  padding: 8rem 2rem;
+  padding: 10rem 0rem 8rem;
   background: white;
 }
 
@@ -372,7 +371,7 @@ const services = [
 }
 
 .services-header h2 {
-  font-size: 2.5rem;
+  font-size: var(--text-h1);
   font-weight: 600;
   color: var(--text-dark);
   margin-top: 0.5rem;
@@ -415,7 +414,7 @@ const services = [
 }
 
 .service-card h3 {
-  font-size: 1.75rem;
+  font-size: var(--text-h3);
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 0.75rem;
@@ -426,12 +425,12 @@ const services = [
   color: var(--text-light);
   font-weight: 300;
   line-height: 1.8;
-  font-size: 1rem;
+  font-size: var(--text-body-lg);
 }
 
 /* CTA Section */
 .about-cta {
-  padding: 10rem 2rem;
+  padding: 8rem 0rem 10rem;
   background: var(--bg-lighter);
   border-top: 1px solid var(--border);
 }
@@ -443,7 +442,7 @@ const services = [
 }
 
 .cta-content h2 {
-  font-size: 2.5rem;
+  font-size: var(--text-h1);
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 1.5rem;
@@ -452,7 +451,7 @@ const services = [
 }
 
 .cta-content p {
-  font-size: 1.125rem;
+  font-size: var(--text-body-lg);
   color: var(--text-light);
   font-weight: 300;
   margin-bottom: 3rem;
@@ -465,10 +464,10 @@ const services = [
   gap: 0.75rem;
   background-color: var(--primary);
   color: white;
-  padding: 1rem 2rem;
+  padding: var(--btn-padding-sm);
   border-radius: 50px;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: var(--text-body) ;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;

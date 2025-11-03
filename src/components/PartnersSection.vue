@@ -49,7 +49,7 @@ const config = partnersStore.getConfig();
 
 <style scoped>
 .partners-section {
-  padding: 10rem 1rem;
+  padding: 10rem 0rem;
   background-color: var(--white);
 }
 
@@ -66,7 +66,7 @@ const config = partnersStore.getConfig();
 
 .section-label {
   color: var(--text-light);
-  font-size: 0.75rem;
+  font-size: var(--text-small);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -74,9 +74,11 @@ const config = partnersStore.getConfig();
 }
 
 .section-header h2 {
-  color: var(--text-dark);
-  margin-bottom: 1rem;
-  font-size: 2.25rem;
+      font-size: var(--text-h1);
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
 }
 
 
@@ -127,7 +129,7 @@ const config = partnersStore.getConfig();
 
 .partner-item p {
   color: var(--text-dark);
-  font-size: 1rem;
+  font-size: var(--text-body-lg);
   font-weight: 400;
   margin: 0;
 }
@@ -143,7 +145,7 @@ const config = partnersStore.getConfig();
 
 .partners-info p {
   color: var(--text-light);
-  font-size: 0.875rem;
+  font-size: var(--text-body-sm);
   font-weight: 300;
   margin: 0;
 }

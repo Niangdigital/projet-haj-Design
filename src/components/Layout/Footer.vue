@@ -3,7 +3,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-column footer-brand">
-          <h3 class="footer-logo"><span>HAJDesign</span></h3>
+          <h3 class="footer-logo"><span>HAJ</span>Design</h3>
           <p class="footer-description">Excellence en construction, design et architecture depuis 15 ans. Nous transformons vos idées en réalité.</p>
           <div class="footer-social-links">
             <a href="#" class="social-link" aria-label="LinkedIn">in</a>
@@ -76,13 +76,14 @@ const nav = useNavigationStore();
 .footer {
   background: linear-gradient(to bottom, #0f172a, #111827);
   color: var(--white);
-  padding: 5rem 1rem 2rem;
+  padding: 5rem 0rem 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .footer-grid {
@@ -102,15 +103,16 @@ const nav = useNavigationStore();
 }
 
 .footer-logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--white);
+  font-size: var(--text-h3);
+  font-weight: 300;  /* ✅ Changé de 600 à 300 pour correspondre au header */
+  color: var(--grisfooter);
   margin-bottom: 1rem;
 }
 
 .footer-logo span {
-  font-weight: 700;
-  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  font-weight: 600;  /* ✅ Le "HAJ" est en bold, comme dans le header */
+  /* On garde le gradient qui existe déjà */
+  background: var(--grisfooter);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -118,7 +120,7 @@ const nav = useNavigationStore();
 
 .footer-description {
   color: #9ca3af;
-  font-size: 0.9375rem;
+  font-size: var(--text-body);
   font-weight: 300;
   line-height: 1.7;
   margin-bottom: 1.5rem;
@@ -135,12 +137,12 @@ const nav = useNavigationStore();
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
   color: #9ca3af;
-  border-radius: 0.5rem;
+  border-radius: 0.85rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: var(--text-body-sm);
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -153,9 +155,8 @@ const nav = useNavigationStore();
 }
 
 .footer-title {
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-size: var(--text-body-lg);
+  font-weight: 400;
   letter-spacing: 0.1em;
   margin-bottom: 1.25rem;
   color: #60a5fa;
@@ -173,7 +174,7 @@ const nav = useNavigationStore();
 .footer-links button {
   background: none;
   color: #9ca3af;
-  font-size: 0.9375rem;
+  font-size: var(--text-body);
   font-weight: 300;
   text-align: left;
   cursor: pointer;
@@ -207,7 +208,7 @@ const nav = useNavigationStore();
 
 .contact-link {
   color: #9ca3af;
-  font-size: 0.9375rem;
+  font-size: var(--text-body);
   font-weight: 300;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -220,7 +221,7 @@ const nav = useNavigationStore();
 
 .contact-text {
   color: #9ca3af;
-  font-size: 0.9375rem;
+  font-size: var(--text-body);
   font-weight: 300;
   line-height: 1.6;
 }
@@ -251,7 +252,7 @@ const nav = useNavigationStore();
 .legal-link {
   background: none;
   color: #9ca3af;
-  font-size: 0.875rem;
+  font-size: var(--text-body-sm);
   font-weight: 300;
   cursor: pointer;
   transition: color 0.3s ease;

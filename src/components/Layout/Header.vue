@@ -17,7 +17,7 @@
           </button>
         </nav>
 
-        <button v-if="!isMobile" @click="nav.setPage('contact')" class="cta-button">
+        <button v-if="!isMobile" @click="nav.setPage('contact')" class="btn btn-secondary btn-sm">
           Nous contacter
         </button>
 
@@ -118,7 +118,7 @@ const isActivePage = (pageId) => {
 }
 
 .logo {
-  font-size: 1.25rem;
+  font-size: var(--text-h3);
   font-weight: 300;
   color: var(--text-dark);
   background: none;
@@ -142,6 +142,7 @@ const isActivePage = (pageId) => {
 
 .nav-link {
   position: relative;
+  font-size: var(--text-body-lg);
   color: var(--text-light);
   background: none;
   font-weight: 400;
