@@ -196,7 +196,7 @@ const config = partnersStore.getConfig();
 
 @media (max-width: 480px) {
   .partners-section {
-    padding: 2rem 0;
+    padding: 6rem 0;
   }
 
   .section-header {

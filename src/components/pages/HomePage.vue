@@ -1282,21 +1282,32 @@ onUnmounted(() => {
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .hero {
-    min-height: auto;
+    min-height: 600px;
     padding: 4rem 1rem;
   }
 
-  .featured-projects,
+  .hero-title{
+    font-size: 2.5rem;
+   
+}
+ .hero-content {
+    padding: 0; /* ✅ Pas de padding supplémentaire */
+  }
+  .featured-projects {
+    padding: 0 0 6rem; /* ✅ Le container gère le padding horizontal */
+  }
   .stats {
     padding: 4rem 0;
   }
 
   .section-header {
     margin-bottom: 3rem;
+     padding: 0; /* ✅ Supprimer tout padding supplémentaire */
   }
 
   .carousel-3d {
     height: 500px;
+     padding: 0; /* ✅ */
   }
 
   .carousel-card {
@@ -1323,9 +1334,13 @@ onUnmounted(() => {
     right: 15px;
   }
 
+  .section-cta {
+    padding-top: 0rem;
+  }
+
   /* TRUST SECTION RESPONSIVE */
   .trust-section {
-    padding: 5rem 0;
+    padding: 6rem 0;
   }
 
   .trust-content {
@@ -1362,7 +1377,7 @@ onUnmounted(() => {
   .stats-compact {
     flex-direction: column;
     gap: 2rem;
-    padding: 2rem;
+   
   }
 
   .stat-compact-divider {
@@ -1393,8 +1408,8 @@ onUnmounted(() => {
   }
 
   .projects-grid-section {
-    margin-top: 6rem;
-    padding: 4rem 0;
+    margin-top: 0;
+    padding: 4rem 0 0;
     border-radius: 30px;
   }
 
@@ -1406,7 +1421,7 @@ onUnmounted(() => {
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 0 1rem;
+    padding: 0;
   }
 }
 </style>

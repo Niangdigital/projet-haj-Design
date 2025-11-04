@@ -453,11 +453,11 @@ const getProjectCount = (category) => {
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .portfolio-hero {
-    padding: 4rem 1rem 3rem;
+    padding: 4rem 0rem 4rem;
   }
 
   .portfolio-hero h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .hero-description {
@@ -475,16 +475,38 @@ const getProjectCount = (category) => {
     justify-content: flex-start;
   }
 
-  .results-info {
+.filter-button {
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: var(--text-body);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: var(--bg-lighter);
+    color: var(--text-light);
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    position: relative;
+}
+
+.filter-button.active {
+    background-color: var(--text-dark);
+    color: var(--white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.results-info {
     width: 100%;
   }
 
   .filters-section {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0rem;
   }
 
   .portfolio-grid-section {
-    padding: 3rem 1rem 4rem;
+    padding: 2rem 0rem 6rem;
   }
 
   .projects-grid {

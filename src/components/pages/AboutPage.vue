@@ -502,16 +502,20 @@ const services = [
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 1.5rem;
+    padding: 0 1rem;
   }
 
   .about-hero {
-    padding: 6rem 1.5rem 5rem;
+    padding: 6rem 0rem 5rem;
     min-height: auto;
   }
 
+  .about-stats {
+    padding: 1rem 0rem 1rem;
+    background: var(--text-dark);
+}
   .about-hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .hero-subtitle {
@@ -519,7 +523,7 @@ const services = [
   }
 
   .about-story {
-    padding: 5rem 1.5rem;
+    padding: 4rem 0rem;
   }
 
   .story-header {
@@ -542,9 +546,11 @@ const services = [
   }
 
   .about-values,
-  .about-services,
+  .about-services {
+    padding: 4rem 0rem;
+  }
   .about-cta {
-    padding: 5rem 1.5rem;
+    padding: 4rem 0rem 6rem;
   }
 
   .values-header,

@@ -287,7 +287,7 @@ const nav = useNavigationStore();
 
 @media (max-width: 768px) {
   .footer {
-    padding: 3rem 1rem 2rem;
+    padding: 3rem 0rem 2rem;
   }
 
   .footer-grid {

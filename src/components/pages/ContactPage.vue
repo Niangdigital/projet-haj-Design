@@ -561,11 +561,16 @@ textarea.form-input {
 
 @media (max-width: 768px) {
   .contact-hero {
-    padding: 4rem 1rem;
+    padding: 4rem 0rem;
+  }
+
+  .contact-cta {
+    padding: 4rem 0rem;
+    background-color: var(--bg-lighter);
   }
 
   .contact-hero h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .hero-subtitle {
@@ -577,7 +582,7 @@ textarea.form-input {
   }
 
   .contact-content {
-    padding: 3rem 1rem 4rem;
+    padding: 3rem 0rem 6rem;
   }
 
   .content-header h2 {

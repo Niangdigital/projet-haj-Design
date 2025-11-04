@@ -840,7 +840,7 @@ const extractImageUrl = (imageString) => {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 1.5rem;
+    padding: 0 1rem;
   }
 
   .project-hero {
@@ -886,5 +886,9 @@ const extractImageUrl = (imageString) => {
     padding: 0.625rem 1rem;
     font-size: 0.875rem;
   }
+  .related-projects[data-v-b90fb4a7] {
+    padding: 4rem 0 6rem;
+    background-color: var(--white);
+}
 }
 </style>

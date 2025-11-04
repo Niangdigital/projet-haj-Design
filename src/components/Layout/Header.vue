@@ -239,7 +239,8 @@ const isActivePage = (pageId) => {
   color: var(--text-dark);
   font-weight: 500;
   background-color: var(--bg-lighter);
-  border-left-color: var(--text-dark);
+  /*border-left-color: var(--text-dark);*/
+  border-radius: var(--radius);
 }
 
 @media (max-width: 768px) {
