@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, watch, nextTick } from 'vue';
 import { useNavigationStore } from './stores/navigationStore.js';
 import { usePortfolioStore } from './stores/portfolioStore.js';
 import Header from './components/Layout/Header.vue';
@@ -37,8 +37,17 @@ import WhatsAppButton from './components/ui/WhatsAppButton.vue';
 const nav = useNavigationStore();
 const portfolio = usePortfolioStore();
 
-// Restaurer l'ID au chargement
+// ✅ SOLUTION: Watcher pour scroller APRÈS le rendu de la nouvelle page
+watch(() => nav.currentPage, async () => {
+  await nextTick(); // Attendre que Vue termine le rendu du nouveau composant
+  window.scrollTo({ top: 0, behavior: 'instant' }); // Scroll instantané en haut
+});
+
 onMounted(() => {
+  // 🔥 CRITIQUE: Initialiser la navigation pour le bouton retour
+  nav.initNavigation();
+  
+  // Restaurer l'ID du projet au chargement
   if (nav.currentPage === 'project-detail') {
     const savedId = sessionStorage.getItem('currentProjectId');
     if (savedId) {

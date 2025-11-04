@@ -283,7 +283,7 @@ const extractImageUrl = (imageString) => {
   position: fixed;
   top: 100px;
   left: 2rem;
-  z-index: 100;
+  z-index: 40;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   color: #1A1A1A;
@@ -881,7 +881,7 @@ const extractImageUrl = (imageString) => {
   }
 
   .back-button-fixed {
-    top: 80px;
+    top: 5.4rem; /* Positionnement fixe 1rem */
     left: 1rem;
     padding: 0.625rem 1rem;
     font-size: 0.875rem;

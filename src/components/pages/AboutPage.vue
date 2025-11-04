@@ -586,7 +586,7 @@ const services = [
   }
 
   .cta-button {
-    width: 100%;
+    font-size: var(--text-body-sm);
     max-width: 300px;
     justify-content: center;
   }

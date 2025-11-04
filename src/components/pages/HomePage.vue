@@ -343,10 +343,13 @@ const getCardStyle = (index) => {
   }
 
   const isCentered = position === 0;
-  const scale = isCentered ? carouselScale.value : 0.75;
+  const isMobile = window.innerWidth < 768;
+  
+  // En mobile, désactiver complètement le scale
+  const scale = isMobile ? 1 : (isCentered ? carouselScale.value : 0.75);
   const opacity = isCentered ? 1 : 0.5;
-  const translateX = position * 400;
-  const translateZ = isCentered ? 0 : -150;
+  const translateX = isMobile ? position * window.innerWidth : position * 400;
+  const translateZ = isMobile ? 0 : (isCentered ? 0 : -150);
   const blur = isCentered ? 0 : 2;
   const zIndex = isCentered ? 10 : 5 - Math.abs(position);
 
@@ -465,43 +468,53 @@ onMounted(() => {
   startImageRotation();
   startCardRotation();
 
-  const carouselObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !isScaleAnimationComplete.value) {
-          isCarouselInView.value = true;
-          
-          const startTime = Date.now();
-          const duration = 200;
-          
-          const animateScale = () => {
-            const elapsed = Date.now() - startTime;
-            const progress = Math.min(elapsed / duration, 1);
+  // Sur mobile, démarrer immédiatement sans attendre l'intersection
+  const isMobile = window.innerWidth < 768;
+  
+  if (isMobile) {
+    isCarouselInView.value = true;
+    isScaleAnimationComplete.value = true;
+    carouselScale.value = 1;
+  } else {
+    // Sur desktop, garder le comportement d'intersection
+    const carouselObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isScaleAnimationComplete.value) {
+            isCarouselInView.value = true;
             
-            const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
-            const easedProgress = easeOutCubic(progress);
+            const startTime = Date.now();
+            const duration = 200;
             
-            carouselScale.value = 0.75 + (0.25 * easedProgress);
+            const animateScale = () => {
+              const elapsed = Date.now() - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              
+              const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+              const easedProgress = easeOutCubic(progress);
+              
+              carouselScale.value = 0.75 + (0.25 * easedProgress);
+              
+              if (progress < 1) {
+                requestAnimationFrame(animateScale);
+              } else {
+                carouselScale.value = 1;
+                isScaleAnimationComplete.value = true;
+              }
+            };
             
-            if (progress < 1) {
-              requestAnimationFrame(animateScale);
-            } else {
-              carouselScale.value = 1;
-              isScaleAnimationComplete.value = true;
-            }
-          };
-          
-          animateScale();
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
+            animateScale();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
 
-  if (carouselSection.value) {
-    carouselObserver.observe(carouselSection.value);
+    if (carouselSection.value) {
+      carouselObserver.observe(carouselSection.value);
+    }
   }
-
+  // Observer pour les stats
   const statsObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -528,7 +541,6 @@ onUnmounted(() => {
 /* HERO SECTION */
 .hero {
   position: relative;
-  /* min-height: 70vh; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -575,7 +587,6 @@ onUnmounted(() => {
 }
 
 .hero-text {
-  
   margin-bottom: 2rem;
   animation: fadeIn 0.8s ease-out forwards;
   opacity: 0;
@@ -601,7 +612,6 @@ onUnmounted(() => {
 }
 
 .hero-title {
-  /*max-width: 1280px;*/
   margin-bottom: 2rem;
   animation: fadeIn 0.8s ease-out forwards;
   opacity: 0;
@@ -622,7 +632,6 @@ onUnmounted(() => {
   animation: fadeIn 0.8s ease-out forwards;
   opacity: 0;
 }
-
 
 /* FEATURED PROJECTS - CARROUSEL */
 .featured-projects {
@@ -1291,10 +1300,10 @@ onUnmounted(() => {
    
 }
  .hero-content {
-    padding: 0; /* ✅ Pas de padding supplémentaire */
+    padding: 0;
   }
   .featured-projects {
-    padding: 0 0 6rem; /* ✅ Le container gère le padding horizontal */
+    padding: 0 0 6rem;
   }
   .stats {
     padding: 4rem 0;
@@ -1302,36 +1311,46 @@ onUnmounted(() => {
 
   .section-header {
     margin-bottom: 3rem;
-     padding: 0; /* ✅ Supprimer tout padding supplémentaire */
+     padding: 0;
   }
 
   .carousel-3d {
-    height: 500px;
-     padding: 0; /* ✅ */
+  height: 550px;
+  padding: 0;
   }
 
   .carousel-card {
-    width: 300px;
-    height: 450px;
+    width: calc(100vw - 0rem);
+    max-width: 100%;
+    height: 520px;
+  }
+
+  .carousel-card.is-centered {
+  cursor: default;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 0px solid transparent;
   }
 
   .carousel-nav {
-    width: 36px;
-    height: 36px;
-    opacity: 0.4;
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
   }
 
   .carousel-nav svg {
-    width: 28px;
-    height: 28px;
+  width: 20px;
+  height: 20px;
   }
 
   .carousel-nav-prev {
-    left: 15px;
+    left: 4px;
   }
 
   .carousel-nav-next {
-    right: 15px;
+    right: 4px;
   }
 
   .section-cta {
@@ -1373,7 +1392,11 @@ onUnmounted(() => {
   .trust-stats {
     gap: 1.5rem;
   }
-
+  .btn-md{
+    padding: var(--btn-padding-lg);
+    font-size: var(--text-body-sm);
+    gap: 0.5rem ;
+}
   .stats-compact {
     flex-direction: column;
     gap: 2rem;
@@ -1423,5 +1446,7 @@ onUnmounted(() => {
     gap: 1.5rem;
     padding: 0;
   }
+
+
 }
 </style>

@@ -261,7 +261,7 @@ const isActivePage = (pageId) => {
   }
 
   .header-content {
-    padding: 1rem 0;
+    padding: 1.20rem 0;
   }
 }
 </style>

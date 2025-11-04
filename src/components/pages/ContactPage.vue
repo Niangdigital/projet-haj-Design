@@ -476,7 +476,7 @@ const contact = useContactStore();
   border: 1px solid var(--border);
   padding: 1rem;
   border-radius: var(--radius-lg);
-  font-size: var(--text-body);
+  font-size: 16px;
   font-family: inherit;
   transition: border-color 0.3s ease;
   color: var(--text-dark);
@@ -604,5 +604,6 @@ textarea.form-input {
   .cta-text h2 {
     font-size: 1.25rem;
   }
+
 }
 </style>

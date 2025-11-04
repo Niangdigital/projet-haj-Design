@@ -179,10 +179,11 @@ const getProjectCount = (category) => {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 40;
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.95);
 }
+
 
 .container {
   max-width: 1280px;
