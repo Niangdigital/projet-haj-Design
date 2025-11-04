@@ -44,9 +44,14 @@
               <span class="contact-icon">📞</span>
               <a href="tel:+33123456789" class="contact-link">+33 1 23 45 67 89</a>
             </div>
-            <div class="contact-item">
+             <div class="contact-item">
               <span class="contact-icon">📍</span>
-              <span class="contact-text">123 Avenue des Champs-Élysées<br>75008 Paris, France</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=123+Avenue+des+Champs-Élysées+75008+Paris+France" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="contact-link location-link">
+                123 Avenue des Champs-Élysées<br>75008 Paris, France
+              </a>
             </div>
           </div>
         </div>

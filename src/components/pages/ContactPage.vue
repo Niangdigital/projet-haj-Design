@@ -24,13 +24,16 @@
               </div>
             </a>
             
-            <div class="contact-card">
+            <a href="https://www.google.com/maps/search/?api=1&query=123+Avenue+des+Champs-Élysées+75008+Paris+France" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="contact-card location-card">
               <div class="card-icon">📍</div>
               <div class="card-content">
                 <div class="card-label">Visitez-nous</div>
                 <div class="card-value">123 Avenue des Champs-Élysées<br>75008 Paris, France</div>
               </div>
-            </div>
+            </a>
             
             <div class="contact-card">
               <div class="card-icon">🕐</div>
@@ -561,24 +564,55 @@ textarea.form-input {
 
 @media (max-width: 768px) {
   .contact-hero {
-    padding: 4rem 0rem;
+    padding: 3.5rem 0rem 4rem;
   }
 
   .contact-cta {
-    padding: 4rem 0rem;
+    padding: 3rem 0rem;
     background-color: var(--bg-lighter);
   }
 
   .contact-hero h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
   }
 
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+
+  .section-label {
+    font-size: 0.7rem;
+    margin-bottom: 0.75rem;
   }
 
   .hero-contact-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .contact-card {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .card-icon {
+    font-size: 1.25rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .card-label {
+    font-size: 0.7rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .card-value {
+    font-size: 0.75rem;
+    line-height: 1.4;
   }
 
   .contact-content {

@@ -247,7 +247,9 @@ const isActivePage = (pageId) => {
   .nav-desktop {
     display: none;
   }
-
+.logo:hover {
+  color: var(--text-dark);
+}
   .cta-button {
     display: none;
   }

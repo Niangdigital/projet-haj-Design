@@ -1291,7 +1291,7 @@ onUnmounted(() => {
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .hero {
-    padding: 4rem 1rem;
+    padding: 3rem 1rem;
   }
 
   .hero-title{
