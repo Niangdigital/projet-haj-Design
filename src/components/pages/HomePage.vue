@@ -1291,7 +1291,6 @@ onUnmounted(() => {
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .hero {
-    min-height: 600px;
     padding: 4rem 1rem;
   }
 
