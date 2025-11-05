@@ -1,6 +1,6 @@
 <template>
   <a 
-    href="https://wa.me/+221775040487" 
+    href="https://wa.me/+221 77 504 04 87" 
     target="_blank" 
     rel="noopener noreferrer" 
     class="whatsapp-button"
@@ -109,7 +109,9 @@ const isHovered = ref(false);
   }
 
   .whatsapp-icon {
-    color: var(--text-dark); /* Icône verte pour fond sombre */
+    color: #25D366; /* Icône verte pour fond sombre */
+    width: 1.7rem;
+    height: 1.7rem;
   }
 
   .whatsapp-text {
@@ -162,15 +164,15 @@ const isHovered = ref(false);
     bottom: 1.5rem;
     right: 1.5rem;
     padding: 0.75rem;
-    min-width: 3rem;
-    height: 3rem;
+    min-width: 3.2rem;
+    height: 3.2rem;
     backdrop-filter: blur(10px) saturate(180%);
     -webkit-backdrop-filter: blur(10px) saturate(180%);
   }
 
   .whatsapp-icon {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.7rem;
+    height: 1.9rem;
   }
 
   .whatsapp-text {

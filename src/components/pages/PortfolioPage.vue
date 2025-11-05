@@ -4,7 +4,7 @@
     <section class="portfolio-hero">
       <div class="container">
         <div class="hero-content">
-          <p class="section-label">Portfolio</p>
+          <p class="section-label">Projets</p>
           <h1>Nos réalisations</h1>
           <p class="hero-description">
             Découvrez nos projets qui allient créativité, expertise technique et excellence architecturale

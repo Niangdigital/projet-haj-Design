@@ -166,7 +166,7 @@
 
           <div class="section-cta">
             <button @click="nav.setPage('portfolio')" class="btn btn-primary btn-lg">
-              Voir le catalogue complet →
+              Voir tous les projets →
             </button>
           </div>
         </div>
