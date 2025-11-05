@@ -31,7 +31,7 @@
             <li><button>Architecture</button></li>
             <li><button>Maçonnerie</button></li>
           </ul>
-        </div>
+        </div> 
 
         <div class="footer-column">
           <h4 class="footer-title">Contact</h4>

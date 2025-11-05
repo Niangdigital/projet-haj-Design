@@ -41,8 +41,8 @@ const isHovered = ref(false);
   
   color: #000;
   padding: 0.875rem;
-  min-width: 3.25rem;
-  height: 3.25rem;
+  min-width: 3.75rem;
+  height: 4rem;
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
@@ -71,8 +71,8 @@ const isHovered = ref(false);
 }
 
 .whatsapp-icon {
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 3rem;
+  height: 3rem;
   flex-shrink: 0;
   transition: transform 0.3s ease;
   color: #25D366; /* Icône noire pour fond clair */
