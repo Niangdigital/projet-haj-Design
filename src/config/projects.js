@@ -88,7 +88,7 @@ export const projectsConfig = [
     
     featured: true,
     inCarousel: true,
-    inGrid: true,
+    inGrid: false,
     order: 1,
     tags: ['luxe', 'rénovation', 'vue-mer', 'écologique']
   },
@@ -288,7 +288,7 @@ export const projectsConfig = [
   },
   
   featured: true,
-  inCarousel: true,
+  inCarousel: false,
   inGrid: false,
   order: 4,
   tags: ['artistique', 'industriel']
@@ -430,19 +430,18 @@ export const projectsConfig = [
   id: 7,
   title: 'Restaurant Gastronomique',
   category: 'Construction',
-  image: 'url(https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800)',
+  image:     'url(/image/image71.jpg)',
   images: [
-    'linear-gradient(135deg, #b2dfdb 0%, #80cbc4 100%)',
-    'linear-gradient(135deg, #80cbc4 0%, #4db6ac 100%)',
-    'url(https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800)'
+      'url(/image/image71.jpg)',
+      'url(/image/image72.jpg)',
   ],
   gallery: [
-    'linear-gradient(135deg, #b2dfdb 0%, #80cbc4 100%)',
-    'linear-gradient(135deg, #80cbc4 0%, #4db6ac 100%)',
-    'url(https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800)',
-    'linear-gradient(135deg, #b2dfdb 0%, #80cbc4 100%)'
+      'url(/image/image71.jpg)',
+      'url(/image/image72.jpg)',
+      'url(/image/image71.jpg)',
+      'url(/image/image72.jpg)'
   ],
-  heroImage: 'linear-gradient(135deg, #b2dfdb 0%, #80cbc4 100%)',
+  heroImage: 'url(/image/image71.jpg)',
   description: 'Restaurant avec cuisine ouverte et terrasse suspendue.',
   details: 'Couverts: 80',
   
@@ -496,19 +495,18 @@ export const projectsConfig = [
   id: 8,
   title: 'Maison Écologique Durable',
   category: 'Architecture',
-  image: 'linear-gradient(135deg, #d1c4e9 0%, #b39ddb 100%)',
+  image: 'url(/image/image72.jpg)',
   images: [
-    'linear-gradient(135deg, #d1c4e9 0%, #b39ddb 100%)',
-    'linear-gradient(135deg, #b39ddb 0%, #9575cd 100%)',
-    'linear-gradient(135deg, #9575cd 0%, #7e57c2 100%)'
+    'url(/image/image72.jpg)',
+    'url(/image/image71.jpg)',
   ],
   gallery: [
-    'linear-gradient(135deg, #d1c4e9 0%, #b39ddb 100%)',
-    'linear-gradient(135deg, #b39ddb 0%, #9575cd 100%)',
-    'linear-gradient(135deg, #9575cd 0%, #7e57c2 100%)',
-    'linear-gradient(135deg, #d1c4e9 0%, #b39ddb 100%)'
+    'url(/image/image72.jpg)',
+    'url(/image/image71.jpg)',
+    'url(/image/image72.jpg)',
+    'url(/image/image71.jpg)'
   ],
-  heroImage: 'linear-gradient(135deg, #d1c4e9 0%, #b39ddb 100%)',
+  heroImage: 'url(/image/image72.jpg)',
   description: 'Résidence BBC avec toiture solaire et matériaux écologiques.',
   details: '100% Solaire',
   
@@ -552,8 +550,8 @@ export const projectsConfig = [
   },
   
   featured: false,
-  inCarousel: false,
-  inGrid: false,
+  inCarousel: true,
+  inGrid: true,
   order: 8,
   tags: ['écologie', 'solaire']
 }
