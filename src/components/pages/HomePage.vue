@@ -146,8 +146,7 @@
                 <img :src="extractImageUrl(p.image)" alt="" class="project-image" />
               </div>
               <div class="project-content">
-                <span class="project-category">{{ p.category }}</span>
-                <h3>{{ p.title }}</h3>
+                
                 <p>{{ p.description }}</p>
                 <div class="project-footer">
                   <div class="project-details">
@@ -1002,7 +1001,7 @@ onUnmounted(() => {
 }
 
 .project-card p {
-  font-size: var(--text-body-sm);
+  font-size: var(--text-body);
   color: var(--text-light);
   margin-bottom: 1rem;
   flex-grow: 1;

@@ -18,7 +18,7 @@ export const projectsConfig = [
     ],
     heroImage: 'url(/image/image1.jpg)', // ✨ NOUVEAU: Image hero format paysage
     description: 'Rénovation complète d\'une villa années 70. Matériaux nobles, baies vitrées panoramiques.',
-    details: 'Surface: 280m² | Durée: 14 mois',
+    details: 'Pharmacie Leclerc',
     
     longDescription: 'Cette villa côtière a été entièrement repensée pour offrir un espace de vie moderne et lumineux. Les baies vitrées panoramiques créent un lien harmonieux entre l\'intérieur et l\'extérieur, tandis que les matériaux nobles comme le bois de teck et la pierre naturelle apportent chaleur et authenticité.',
     
@@ -110,7 +110,7 @@ export const projectsConfig = [
     ],
     heroImage: 'url(/image/image22.jpg)',
     description: 'Bureau innovant pour startup. Zones créatives, open-space modulable.',
-    details: 'Surface: 450m² | Zones: 8',
+    details: 'Pharmacie Leclerc',
     
     longDescription: 'Un espace de travail pensé pour favoriser la créativité et la collaboration. Le design modulable permet d\'adapter les espaces selon les besoins, tandis que les zones acoustiques offrent des espaces de concentration. L\'utilisation de couleurs vives et de mobilier ergonomique crée un environnement stimulant et confortable.',
     
@@ -180,8 +180,8 @@ export const projectsConfig = [
     'url(/image/image31.jpg)'
   ],
   heroImage: 'url(/image/image32.jpg)',
-  description: 'Immeuble 5 étages avec galerie commerciale et bureaux modernes.',
-  details: 'Hauteur: 22m | Étages: 5',
+  description: 'Immeuble 7 étages avec galerie commerciale et bureaux modernes.',
+  details: ' Pharmacie leclerc  ',
   
   longDescription: 'Un complexe commercial multifonctionnel conçu pour dynamiser le paysage urbain. L\'architecture contemporaine intègre des espaces commerciaux en rez-de-chaussée, une galerie marchande lumineuse et des bureaux modernes aux étages supérieurs. La façade vitrée maximise la luminosité naturelle tout en offrant une esthétique élégante.',
   
@@ -246,7 +246,7 @@ export const projectsConfig = [
   ],
   heroImage: 'url(/image/image42.jpg)',
   description: 'Transformation d\'ancien atelier en loft avec poutres apparentes.',
-  details: 'Surface: 320m² | Plafond: 6m',
+  details: 'Pharmacie Leclerc',
   
   longDescription: 'Réhabilitation d\'un ancien atelier industriel en loft contemporain. Le projet conserve l\'âme du lieu avec ses poutres métalliques apparentes et ses hauts plafonds, tout en intégrant des aménagements modernes. Les espaces ouverts sont ponctués de cloisons vitrées pour préserver la luminosité et les volumes généreux.',
   
@@ -312,7 +312,7 @@ export const projectsConfig = [
   ],
   heroImage: 'url(/image/image52.jpg)',
   description: 'Agrandissement harmonieux avec patio intégré et ossature acier.',
-  details: 'Extension: +85m²',
+  details: 'Pharmacie Leclerc',
   
   longDescription: 'Extension architecturale d\'une villa existante intégrant un patio central couvert. La structure en acier permet de grandes portées et une intégration légère avec l\'existant. Les nouveaux espaces comprennent un salon lumineux, une suite parentale et un bureau, tous ouverts sur le jardin intérieur.',
   
@@ -378,7 +378,7 @@ export const projectsConfig = [
   ],
   heroImage: 'url(/image/image62.jpg)',
   description: 'Espace retail haut de gamme avec expérience immersive.',
-  details: 'Surface: 180m²',
+  details: 'Pharmacie Leclerc',
   
   longDescription: 'Boutique concept store alliant luxe et technologie. L\'espace propose une expérience client unique avec des zones d\'essayage privatives, un éclairage scénographique adaptatif et des matériaux nobles (marbre, laiton brossé, verre texturé). L\'agencement fluide guide naturellement le parcours client.',
   
@@ -443,7 +443,7 @@ export const projectsConfig = [
   ],
   heroImage: 'url(/image/image71.jpg)',
   description: 'Restaurant avec cuisine ouverte et terrasse suspendue.',
-  details: 'Couverts: 80',
+  details: 'Pharmacie Leclerc',
   
   longDescription: 'Création d\'un restaurant gastronomique avec cuisine ouverte sur la salle. La terrasse suspendue offre une vue panoramique sur l\'océan. L\'acoustique a été particulièrement soignée pour garantir le confort des convives. Les matériaux naturels (bois, pierre, végétaux) créent une ambiance chaleureuse et raffinée.',
   
@@ -508,7 +508,7 @@ export const projectsConfig = [
   ],
   heroImage: 'url(/image/image72.jpg)',
   description: 'Résidence BBC avec toiture solaire et matériaux écologiques.',
-  details: '100% Solaire',
+  details: 'Pharmacie Leclerc',
   
   longDescription: 'Villa bioclimatique à énergie positive intégrant les dernières innovations écologiques. Panneaux solaires en toiture, isolation renforcée en matériaux biosourcés, récupération des eaux pluviales et ventilation naturelle. L\'orientation optimisée et les protections solaires garantissent un confort thermique optimal toute l\'année.',
   

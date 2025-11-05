@@ -2,8 +2,10 @@
   /* Couleurs */
   --primary: #2563eb;
   --primary-dark: #1e40af;
+  --primary-darker: #1e293b;
   --secondary: #64748b;
-  --text-dark: #111827;
+  --text-dark: #0f172a;
+  
   --text-light: #4b5563;
   --text-lighter: #6b7280;
   --grisfooter: #9ca3af;
@@ -270,12 +272,13 @@ a:hover {
 .btn-outline {
   background-color: transparent;
   color: var(--text-dark);
-  border: 1.5px solid var(--text-dark);
+  border: 1.25px solid var(--text-dark);
   box-shadow: none;
 }
 
 .btn-outline:hover {
-  background-color: var(--text-dark);
+  background-color: var(--primary);
+  border: 1.5px solid var(--primary);
   color: var(--white);
   transform: translateY(-2px);
 }

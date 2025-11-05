@@ -1,6 +1,6 @@
 <template>
   <a 
-    href="https://wa.me/+221 77 504 04 87" 
+    href="https://wa.me/+221775040487" 
     target="_blank" 
     rel="noopener noreferrer" 
     class="whatsapp-button"
@@ -216,6 +216,11 @@ const isHovered = ref(false);
       background: rgba(0, 0, 0, 0.9);
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
+    .whatsapp-icon {
+    color: #25D366; /* Icône verte pour fond sombre */
+    width: 1.7rem;
+    height: 1.7rem;
+  }
     
     .whatsapp-button:hover {
       background: #25D366;
