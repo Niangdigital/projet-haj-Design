@@ -87,7 +87,7 @@ export const projectsConfig = [
     },
     
     featured: true,
-    inCarousel: true,
+    inCarousel: false,
     inGrid: false,
     order: 1,
     tags: ['luxe', 'rénovation', 'vue-mer', 'écologique']
@@ -156,7 +156,7 @@ export const projectsConfig = [
     
     featured: true,
     inCarousel: true,
-    inGrid: true,
+    inGrid: false,
     order: 2,
    
   },
@@ -167,15 +167,15 @@ export const projectsConfig = [
   id: 3,
   title: 'Complexe Commercial Urbain',
   category: 'Architecture',
-  image: 'url(/image/image31.jpg)',
+  image: 'url(/image/image32.jpg)',
   images: [
-    'url(/image/image31.jpg)',
     'url(/image/image32.jpg)',
+    'url(/image/image31.jpg)',
 
   ],
   gallery: [
-    'url(/image/image31.jpg)',
     'url(/image/image32.jpg)',
+    'url(/image/image31.jpg)',
     'url(/image/image32.jpg)',
     'url(/image/image31.jpg)'
   ],
@@ -233,10 +233,10 @@ export const projectsConfig = [
   id: 4,
   title: 'Loft Artistique Industriel',
   category: 'Design Intérieur',
-  image: 'url(/image/image42.jpg)',
+  image: 'url(/image/image41.jpg)',
   images: [
-    'url(/image/image42.jpg)',
     'url(/image/image41.jpg)',
+    'url(/image/image42.jpg)',
   ],
   gallery: [
     'url(/image/image42.jpg)',
@@ -288,8 +288,8 @@ export const projectsConfig = [
   },
   
   featured: true,
-  inCarousel: false,
-  inGrid: false,
+  inCarousel: true,
+  inGrid: true,
   order: 4,
   tags: ['artistique', 'industriel']
 },
