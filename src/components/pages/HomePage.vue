@@ -305,7 +305,7 @@ const isImageRotationComplete = ref(false);
 // STATS STATE
 const statsSection = ref(null);
 const animatedStats = ref([0, 0, 0]);
-const statsTargets = [150, 15, 98];
+const statsTargets = [20, 9, 98];
 const hasAnimated = ref(false);
 
 // TIMERS
@@ -738,6 +738,7 @@ onUnmounted(() => {
   position: absolute;
   inset: 0;
   pointer-events: none;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent 20%) !important;
 }
 
 .image-indicator {

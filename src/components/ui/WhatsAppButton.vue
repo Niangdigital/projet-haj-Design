@@ -71,11 +71,11 @@ const isHovered = ref(false);
 }
 
 .whatsapp-icon {
-  width: 1.375rem;
-  height: 1.375rem;
+  width: 1.7rem;
+  height: 1.7rem;
   flex-shrink: 0;
   transition: transform 0.3s ease;
-  color: #000; /* Icône noire pour fond clair */
+  color: #25D366; /* Icône noire pour fond clair */
 }
 
 .whatsapp-button:hover .whatsapp-icon {
@@ -102,9 +102,7 @@ const isHovered = ref(false);
   .whatsapp-button {
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 
-      0 4px 12px -2px rgba(0, 0, 0, 0.3),
-      0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+
     color: #fff;
   }
 
@@ -168,15 +166,23 @@ const isHovered = ref(false);
     height: 3.2rem;
     backdrop-filter: blur(10px) saturate(180%);
     -webkit-backdrop-filter: blur(10px) saturate(180%);
+    background-color: #25D366;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: 1px solid #25D366;
+  
+    color: #fff;
   }
 
   .whatsapp-icon {
     width: 1.7rem;
     height: 1.9rem;
+    color: #fff;
   }
 
   .whatsapp-text {
     font-size: 0.8125rem;
+    color: #fff;
   }
 
   .whatsapp-button:hover {
@@ -197,6 +203,10 @@ const isHovered = ref(false);
   }
 }
 
+
+
+
+
 /* Fallback pour les navigateurs qui ne supportent pas backdrop-filter */
 @supports not (backdrop-filter: blur(10px)) {
   .whatsapp-button {
@@ -216,11 +226,6 @@ const isHovered = ref(false);
       background: rgba(0, 0, 0, 0.9);
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
-    .whatsapp-icon {
-    color: #25D366; /* Icône verte pour fond sombre */
-    width: 1.7rem;
-    height: 1.7rem;
-  }
     
     .whatsapp-button:hover {
       background: #25D366;
