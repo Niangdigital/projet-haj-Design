@@ -233,19 +233,18 @@ export const projectsConfig = [
   id: 4,
   title: 'Loft Artistique Industriel',
   category: 'Design Intérieur',
-  image: 'url(https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800)',
+  image: 'url(/image/image42.jpg)',
   images: [
-    'url(https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800)',
-    'url(https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800)',
-    'url(https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800)'
+    'url(/image/image42.jpg)',
+    'url(/image/image41.jpg)',
   ],
   gallery: [
-    'url(https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800)',
-    'url(https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800)',
-    'url(https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800)',
-    'url(https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800)'
+    'url(/image/image42.jpg)',
+    'url(/image/image41.jpg)',
+    'url(/image/image42.jpg)',
+    'url(/image/image41.jpg)'
   ],
-  heroImage: 'url(https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800)',
+  heroImage: 'url(/image/image42.jpg)',
   description: 'Transformation d\'ancien atelier en loft avec poutres apparentes.',
   details: 'Surface: 320m² | Plafond: 6m',
   
@@ -299,19 +298,19 @@ export const projectsConfig = [
   id: 5,
   title: 'Extension Résidentielle Premium',
   category: 'Maçonnerie',
-  image: 'url(https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=800)',
+  image: 'url(/image/image52.jpg)',
   images: [
-    'url(https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800)',
-    'url(https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800)',
-    'url(https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=800)'
+    'url(/image/image52.jpg)',
+    'url(/image/image51.jpg)',
+  
   ],
   gallery: [
-    'url(https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800)',
-    'url(https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800)',
-    'url(https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=800)',
-    'url(https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800)'
+    'url(/image/image52.jpg)',
+    'url(/image/image51.jpg)',
+    'url(/image/image52.jpg)',
+    'url(/image/image51.jpg)'
   ],
-  heroImage: 'url(https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=800)',
+  heroImage: 'url(/image/image52.jpg)',
   description: 'Agrandissement harmonieux avec patio intégré et ossature acier.',
   details: 'Extension: +85m²',
   
@@ -365,19 +364,19 @@ export const projectsConfig = [
   id: 6,
   title: 'Boutique Flagship Luxe',
   category: 'Architecture',
-  image: 'linear-gradient(135deg, #f8bbd0 0%, #f48fb1 100%)',
+  image: 'url(/image/image62.jpg)',
   images: [
-    'linear-gradient(135deg, #f8bbd0 0%, #f48fb1 100%)',
-    'linear-gradient(135deg, #f48fb1 0%, #f06292 100%)',
-    'linear-gradient(135deg, #f06292 0%, #ec407a 100%)'
+    'url(/image/image62.jpg)',
+    'url(/image/image61.jpg)',
+    
   ],
   gallery: [
-    'linear-gradient(135deg, #f8bbd0 0%, #f48fb1 100%)',
-    'linear-gradient(135deg, #f48fb1 0%, #f06292 100%)',
-    'linear-gradient(135deg, #f06292 0%, #ec407a 100%)',
-    'linear-gradient(135deg, #f8bbd0 0%, #f48fb1 100%)'
+    'url(/image/image62.jpg)',
+    'url(/image/image61.jpg)',
+    'url(/image/image62.jpg)',
+    'url(/image/image61.jpg)'
   ],
-  heroImage: 'linear-gradient(135deg, #f8bbd0 0%, #f48fb1 100%)',
+  heroImage: 'url(/image/image62.jpg)',
   description: 'Espace retail haut de gamme avec expérience immersive.',
   details: 'Surface: 180m²',
   
