@@ -1319,7 +1319,7 @@ onUnmounted(() => {
   }
 
   .carousel-card {
-    width: calc(100vw - 0rem);
+    width: calc(100vw - 6rem);
     max-width: 100%;
     height: 520px;
   }
@@ -1331,9 +1331,9 @@ onUnmounted(() => {
   }
 
   .carousel-nav {
-  width: 40px;
-  height: 40px;
-  opacity: 0.5;
+  width: 30px;
+  height: 30px;
+  opacity: 0.9;
   background: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border-radius: 50%;
@@ -1345,11 +1345,11 @@ onUnmounted(() => {
   }
 
   .carousel-nav-prev {
-    left: 4px;
+    left: 1px;
   }
 
   .carousel-nav-next {
-    right: 4px;
+    right: 1px;
   }
 
   .section-cta {
@@ -1414,6 +1414,7 @@ onUnmounted(() => {
   .carousel-controls {
     flex-direction: row;
     gap: 0.75rem;
+    padding: 0.05rem;
   }
 
   .progress-nav-btn {
