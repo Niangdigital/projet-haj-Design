@@ -1345,11 +1345,11 @@ onUnmounted(() => {
   }
 
   .carousel-nav-prev {
-    left: 1px;
+    left: 0px;
   }
 
   .carousel-nav-next {
-    right: 1px;
+    right: 0px;
   }
 
   .section-cta {
