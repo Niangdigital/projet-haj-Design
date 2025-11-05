@@ -8,7 +8,7 @@
           <p class="hero-subtitle">Bienvenue chez HAJ Design</p>
         </div>
         <h1 class="hero-title" style="animation-delay: 0.4s">
-         Plus qu'un design une nouvelle expérience <span class="highlight">pour vos futurs clients</span>
+          <span class="highlight">Pour vos futurs clients</span>
         </h1>
         <p class="hero-description" style="animation-delay: 0.6s">
           Construction — Design d'Intérieur — Architecture — Maçonnerie

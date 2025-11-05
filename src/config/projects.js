@@ -3,20 +3,20 @@ export const projectsConfig = [
     id: 1,
     title: 'Villa Contemporaine Côtière',
     category: 'Construction',
-    image: 'url(/public/image/image1.jpg)', // Image principale (carousel, cards)
+    image: 'url(/image/image1.jpg)', // Image principale (carousel, cards)
     images: [ // Pour carousel/autres usages existants
-      'url(/public/image/image1.jpg)',
-      'url(/public/image/image2.jpg)'
+      'url(/image/image1.jpg)',
+      'url(/image/image2.jpg)'
     ],
     gallery: [ // ✨ NOUVEAU: Galerie photos spécifique
-      'url(/public/image/image1.jpg)',
-      'url(/public/image/image2.jpg)',
-      'url(/public/image/image3.jpg)',
-      'url(/public/image/image4.jpg)',
-      'url(/public/image/image1.jpg)',
-      'url(/public/image/image2.jpg)'
+      'url(/image/image1.jpg)',
+      'url(/image/image2.jpg)',
+      'url(/image/image3.jpg)',
+      'url(/image/image4.jpg)',
+      'url(/image/image1.jpg)',
+      'url(/image/image2.jpg)'
     ],
-    heroImage: 'url(/public/image/image1.jpg)', // ✨ NOUVEAU: Image hero format paysage
+    heroImage: 'url(/image/image1.jpg)', // ✨ NOUVEAU: Image hero format paysage
     description: 'Rénovation complète d\'une villa années 70. Matériaux nobles, baies vitrées panoramiques.',
     details: 'Surface: 280m² | Durée: 14 mois',
     

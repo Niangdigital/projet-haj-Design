@@ -8,11 +8,11 @@
           <p class="hero-subtitle">Une simple conversation peut transformer une idée en réalité.<br>Notre équipe est à votre écoute.</p>
           
           <div class="hero-contact-cards">
-            <a href="tel:+33123456789" class="contact-card">
+            <a href="tel:+221775040487" class="contact-card">
               <div class="card-icon">📞</div>
               <div class="card-content">
                 <div class="card-label">Appelez-nous</div>
-                <div class="card-value">+33 1 23 45 67 89</div>
+                <div class="card-value">+221 77 504 04 87</div>
               </div>
             </a>
             
@@ -20,18 +20,18 @@
               <div class="card-icon">📧</div>
               <div class="card-content">
                 <div class="card-label">Écrivez-nous</div>
-                <div class="card-value">contact@hdesign.com</div>
+                <div class="card-value">contact@hajdesign.com</div>
               </div>
             </a>
             
-            <a href="https://www.google.com/maps/search/?api=1&query=123+Avenue+des+Champs-Élysées+75008+Paris+France" 
+            <a href="https://www.google.com/maps/search/?api=1&query=Rufisque+Dakar+Senegal"
                target="_blank" 
                rel="noopener noreferrer" 
                class="contact-card location-card">
               <div class="card-icon">📍</div>
               <div class="card-content">
                 <div class="card-label">Visitez-nous</div>
-                <div class="card-value">123 Avenue des Champs-Élysées<br>75008 Paris, France</div>
+                <div class="card-value">Rufisque<br>Dakar, Sénégal</div>
               </div>
             </a>
             
@@ -79,7 +79,7 @@
             <h2>Préférez un rendez-vous ?</h2>
             <p>Discutons de votre projet en personne ou en visioconférence</p>
           </div>
-          <a href="tel:+33123456789" class="cta-button">
+          <a href="tel:+221775040487" class="cta-button">
             Prendre rendez-vous
           </a>
         </div>

@@ -38,20 +38,20 @@
           <div class="footer-contact-info">
             <div class="contact-item">
               <span class="contact-icon">📧</span>
-              <a href="mailto:contact@hdesign.com" class="contact-link">contact@hdesign.com</a>
+              <a href="mailto:contact@hdesign.com" class="contact-link">contact@hajdesign.com</a>
             </div>
             <div class="contact-item">
               <span class="contact-icon">📞</span>
-              <a href="tel:+33123456789" class="contact-link">+33 1 23 45 67 89</a>
+              <a href="tel:+221775040487" class="contact-link">+221 77 504 04 87</a>
             </div>
              <div class="contact-item">
               <span class="contact-icon">📍</span>
-              <a href="https://www.google.com/maps/search/?api=1&query=123+Avenue+des+Champs-Élysées+75008+Paris+France" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 class="contact-link location-link">
-                123 Avenue des Champs-Élysées<br>75008 Paris, France
-              </a>
+             <a href="https://www.google.com/maps/search/?api=1&query=Rufisque+Dakar+Senegal" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="contact-link location-link">
+              Rufisque<br>Dakar, Sénégal
+            </a>
             </div>
           </div>
         </div>

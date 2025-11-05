@@ -16,7 +16,7 @@ export const usePartnersStore = defineStore('partners', () => {
 
   const config = ref({
     title: 'Ils nous font confiance',
-    subtitle: 'Partenaires',
+    subtitle: 'Clients & Partenaires',
     description: '+50 clients nous font confiance pour transformer leurs espaces'
   });
 
