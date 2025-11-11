@@ -560,14 +560,25 @@ const services = [
 
   .value-card {
     padding: 2rem 1.5rem;
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+     border-color: var(--white);
   }
+  .value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: var(--white);
+  
+}
 
   .service-card {
     grid-template-columns: 60px 1fr;
     gap: 1.5rem;
     padding: 2rem 0;
   }
-
+.service-card:hover {
+  padding-left: 0rem;
+}
   .service-icon {
     font-size: 2.5rem;
   }

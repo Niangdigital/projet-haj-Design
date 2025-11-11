@@ -1313,6 +1313,11 @@ onUnmounted(() => {
      padding: 0;
   }
 
+.btn-primary:hover {
+  background-color: var(--primary);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+  transform: translateY(-2px);
+}
   .carousel-3d {
   height: 550px;
   padding: 0;
@@ -1333,11 +1338,47 @@ onUnmounted(() => {
   .carousel-nav {
   width: 30px;
   height: 30px;
-  opacity: 0.9;
+  opacity: 1;
   background: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border-radius: 50%;
+  transform: translateY(-50%) scale(1.15);
   }
+
+
+.carousel-nav:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.15);
+}
+
+
+.progress-nav-btn {
+  background: white;
+  color: var(--text-dark);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 0;
+  flex-shrink: 0;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.progress-nav-btn:hover {
+  background: white;
+  color: var(--text-dark);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+ transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 
   .carousel-nav svg {
   width: 20px;
@@ -1391,10 +1432,60 @@ onUnmounted(() => {
   .trust-stats {
     gap: 1.5rem;
   }
-  .btn-md{
+
+  .service-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+
+}
+
+.service-item:hover .service-icon {
+  background: rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
+}
+
+
+.service-icon svg {
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+}
+
+.service-item:hover .service-icon svg {
+  color: var(--text-dark);
+}
+
+.btn-md{
     padding: var(--btn-padding-lg);
     font-size: var(--text-body-sm);
     gap: 0.5rem ;
+    
+}
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-dark);
+    border: 1.5px solid var(--text-dark);
+    box-shadow: none;
+}
+.btn-outline:hover {
+    background-color: transparent;
+    border: 1.5px solid var(--text-dark);
+   color: var(--text-dark);
+    transform: translateY(-0px);
+}
+.btn-secondary:hover {
+  background-color: var(--text-dark);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-0px);
 }
   .stats-compact {
     flex-direction: column;
@@ -1430,11 +1521,39 @@ onUnmounted(() => {
     padding: 2rem;
   }
 
+.project-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--white);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  box-shadow: 0;
+  transform: translateY(0px);
+}
   .projects-grid-section {
     margin-top: 0;
     padding: 4rem 0 0;
     border-radius: 30px;
   }
+
+
+  .project-action svg {
+  color: var(--primary);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(4px);
+
+}
+
+.project-card:hover .project-action svg {
+  color: var(--primary);
+  transform: translateX(4px);
+}
 
   .section-header-grid {
     margin-bottom: 3rem;

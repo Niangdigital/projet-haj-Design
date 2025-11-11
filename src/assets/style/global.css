@@ -272,7 +272,7 @@ a:hover {
 .btn-outline {
   background-color: transparent;
   color: var(--text-dark);
-  border: 1.25px solid var(--text-dark);
+  border: 1.var5px solid var(--text-dark);
   box-shadow: none;
 }
 

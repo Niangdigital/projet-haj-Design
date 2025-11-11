@@ -597,8 +597,23 @@ textarea.form-input {
   .contact-card {
     padding: 1rem;
     gap: 0.5rem;
-  }
-
+  border-color: rgba(96, 165, 250, 0.4);
+  transform: translateY(-4px);
+}
+  
+.social-button {
+       background-color: var(--bg-lighter);
+    color: var(--text-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+}
+.social-button:hover {
+       background-color: var(--bg-lighter);
+    color: var(--text-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
   .card-icon {
     font-size: 1.25rem;
     width: 2rem;
@@ -638,6 +653,20 @@ textarea.form-input {
   .cta-text h2 {
     font-size: 1.25rem;
   }
+
+  .cta-button {
+    background-color: var(--primary);
+}
+.cta-button:hover {
+  background-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4);
+}
+
+.form-button:hover:not(:disabled) {
+  background-color: var(--primary);
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+}
 
 }
 </style>

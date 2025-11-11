@@ -484,12 +484,18 @@ const getProjectCount = (category) => {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     background-color: var(--bg-lighter);
     color: var(--text-light);
-    border: 1px solid transparent;
+    border-color: rgba(0, 0, 0, 0.1); 
+    transform: translateY(-1px);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 0.375rem;
     position: relative;
+}
+.filter-button:hover:not(.active) {
+  background-color: var(--bg-light);
+  border-color: rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
 }
 
 .filter-button.active {
@@ -502,6 +508,7 @@ const getProjectCount = (category) => {
     width: 100%;
   }
 
+
   .filters-section {
     padding: 1.5rem 0rem;
   }
@@ -510,11 +517,23 @@ const getProjectCount = (category) => {
     padding: 2rem 0rem 6rem;
   }
 
+  .card-action {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
 
+  }.project-card:hover .card-overlay {
+  opacity: 0;
+}
   .empty-state {
     padding: 4rem 1rem;
   }

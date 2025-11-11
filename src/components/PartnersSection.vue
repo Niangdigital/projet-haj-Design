@@ -184,6 +184,26 @@ const config = partnersStore.getConfig();
     font-size: 0.875rem;
   }
 
+  .partner-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-lighter);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  min-width: max-content;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.partner-item:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-lighter);
+}
+
   @keyframes scroll {
     0% {
       transform: translateX(0);
