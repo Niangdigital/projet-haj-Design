@@ -52,17 +52,25 @@ const isPaused = ref(false);
 
 const handleTouchStart = () => {
   isPaused.value = true;
+  if (carouselTrack.value) {
+    carouselTrack.value.style.animationPlayState = 'paused';
+  }
 };
 
 const handleTouchEnd = () => {
   isPaused.value = false;
+  if (carouselTrack.value) {
+    carouselTrack.value.style.animationPlayState = 'running';
+  }
 };
 
 onMounted(() => {
-  if (carouselTrack.value) {
-    carouselTrack.value.addEventListener('touchstart', handleTouchStart);
-    carouselTrack.value.addEventListener('touchend', handleTouchEnd);
-    carouselTrack.value.addEventListener('touchcancel', handleTouchEnd);
+  const track = document.querySelector('.carousel-track');
+  if (track) {
+    carouselTrack.value = track;
+    track.addEventListener('touchstart', handleTouchStart);
+    track.addEventListener('touchend', handleTouchEnd);
+    track.addEventListener('touchcancel', handleTouchEnd);
   }
 });
 
@@ -219,6 +227,7 @@ onUnmounted(() => {
   background-color: var(--bg-lighter);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
+  color: var(--text-dark);
   padding: 1.5rem;
   min-width: max-content;
   transition: all 0.3s ease;
@@ -227,9 +236,12 @@ onUnmounted(() => {
 }
 
 .partner-item:hover {
-  border-color: var(--primary);
+  border: 1px solid var(--border);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   background-color: var(--bg-lighter);
+}
+.partner-item:hover p {
+    color: var(--text-dark);
 }
 
   @keyframes scroll {

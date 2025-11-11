@@ -20,19 +20,18 @@ export const useNavigationStore = defineStore('navigation', () => {
   const menuOpen = ref(false);
   const scrollY = ref(0);
 
-  // Fonction pour changer de page avec historique navigateur
-  const setPage = (page) => {
-    if (currentPage.value === page) return; // Ne rien faire si déjà sur la page
+  // 🔥 MODIFIÉ: Fonction pour changer de page avec section optionnelle
+  const setPage = (page, section = null) => {
+    if (currentPage.value === page && !section) return;
     
     currentPage.value = page;
     menuOpen.value = false;
-    window.scrollTo(0, 0);
     
     // Sauvegarder dans sessionStorage
     if (typeof window !== 'undefined') {
       sessionStorage.setItem('currentPage', page);
       
-      // 🔥 AJOUT: Mettre à jour l'URL et l'historique du navigateur
+      // Mettre à jour l'URL et l'historique du navigateur
       const urlMap = {
         'home': '/',
         'portfolio': '/portfolio',
@@ -42,6 +41,20 @@ export const useNavigationStore = defineStore('navigation', () => {
       
       const url = urlMap[page] || '/';
       window.history.pushState({ page }, '', url);
+      
+      // 🔥 NOUVEAU: Gérer le scroll vers la section
+      if (section) {
+        // Attendre que le composant soit monté avant de scroller
+        setTimeout(() => {
+          const element = document.querySelector(`.${section}`);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
+      } else {
+        // Scroll en haut si pas de section spécifiée
+        window.scrollTo(0, 0);
+      }
     }
   };
 
@@ -55,22 +68,19 @@ export const useNavigationStore = defineStore('navigation', () => {
       sessionStorage.setItem('currentProjectId', projectId);
       sessionStorage.setItem('currentPage', 'project-detail');
       
-      // 🔥 AJOUT: Mettre à jour l'URL avec l'ID du projet
       window.history.pushState({ page: 'project-detail', projectId }, '', `/project/${projectId}`);
     }
   };
 
-  // 🔥 NOUVEAU: Gérer le bouton retour du navigateur
+  // Gérer le bouton retour du navigateur
   const handlePopState = (event) => {
     if (event.state && event.state.page) {
-      // Navigation depuis l'état du navigateur
       currentPage.value = event.state.page;
       
       if (event.state.projectId) {
         sessionStorage.setItem('currentProjectId', event.state.projectId);
       }
     } else {
-      // Fallback: détecter depuis l'URL
       const path = window.location.pathname;
       
       if (path === '/' || path === '') {
@@ -94,13 +104,11 @@ export const useNavigationStore = defineStore('navigation', () => {
     window.scrollTo(0, 0);
   };
 
-  // 🔥 NOUVEAU: Initialiser l'écoute du bouton retour
+  // Initialiser l'écoute du bouton retour
   const initNavigation = () => {
     if (typeof window !== 'undefined') {
-      // Écouter les événements popstate (bouton retour/avant)
       window.addEventListener('popstate', handlePopState);
       
-      // Initialiser l'état de l'historique au chargement
       const initialState = {
         page: currentPage.value,
         projectId: sessionStorage.getItem('currentProjectId')

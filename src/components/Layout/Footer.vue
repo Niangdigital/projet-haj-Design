@@ -23,22 +23,22 @@
           </ul>
         </div>
 
-        <div class="footer-column">
-          <h4 class="footer-title">Services</h4>
-          <ul class="footer-links">
-            <li><button>Construction</button></li>
-            <li><button>Design Intérieur</button></li>
-            <li><button>Architecture</button></li>
-            <li><button>Maçonnerie</button></li>
-          </ul>
-        </div> 
+  <div class="footer-column">
+  <h4 class="footer-title">Services</h4>
+  <ul class="footer-links">
+    <li><button @click="nav.setPage('about', 'about-services')">Construction</button></li>
+    <li><button @click="nav.setPage('about', 'about-services')">Design Intérieur</button></li>
+    <li><button @click="nav.setPage('about', 'about-services')">Architecture</button></li>
+    <li><button @click="scrollToMasonry">Maçonnerie</button></li>
+  </ul>
+</div>
 
         <div class="footer-column">
           <h4 class="footer-title">Contact</h4>
           <div class="footer-contact-info">
             <div class="contact-item">
               <span class="contact-icon">📧</span>
-              <a href="mailto:contact@hdesign.com" class="contact-link">contact@hajdesign.com</a>
+              <a href="mailto:contact@hajdesign.com" class="contact-link">contact@hajdesign.com</a>
             </div>
             <div class="contact-item">
               <span class="contact-icon">📞</span>
@@ -59,13 +59,16 @@
 
       <div class="footer-bottom">
         <p>© 2024 HAJ Design. Tous droits réservés.</p>
-        <div class="footer-legal">
-          <button class="legal-link">Mentions légales</button>
-          <span class="separator">•</span>
-          <button class="legal-link">Politique de confidentialité</button>
-          <span class="separator">•</span>
-          <button class="legal-link">CGV</button>
-        </div>
+
+                    
+                    <div class="footer-legal">
+                      <button class="legal-link">Mentions légales</button>
+                      <span class="separator">•</span>
+                      <button class="legal-link">Politique de confidentialité</button>
+                      <span class="separator">•</span>
+                      <button class="legal8-link">CGV</button>
+                    </div>
+
       </div>
     </div>
   </footer>
@@ -75,6 +78,32 @@
 import { useNavigationStore } from '../../stores/navigationStore';
 
 const nav = useNavigationStore();
+const scrollToMasonry = () => {
+  nav.currentPage = 'about';
+  nav.menuOpen = false;
+  
+  if (typeof window !== 'undefined') {
+    sessionStorage.setItem('currentPage', 'about');
+    window.history.pushState({ page: 'about' }, '', '/about');
+    
+    // Attendre que la page soit montée
+    setTimeout(() => {
+      const element = document.querySelector('.about-services');
+      if (element) {
+        // 🔥 Calculer la position avec l'offset directement
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition + 300; // Ajuste cette valeur
+        
+        // Un seul scroll direct vers la position finale
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 100);
+  }
+};
+
 </script>
 
 <style scoped>
@@ -299,6 +328,7 @@ const nav = useNavigationStore();
   width: 2.5rem;
   height: 2.5rem;
   background: rgba(96, 165, 250, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: #60a5fa;
   border-radius: 0.85rem;
   display: flex;
@@ -312,7 +342,7 @@ const nav = useNavigationStore();
 
 .social-link:hover {
   background: rgba(96, 165, 250, 0.15);
-  border-color: #60a5fa;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: #60a5fa;
   transform: translateY(-0px);
 }
@@ -354,6 +384,21 @@ const nav = useNavigationStore();
 
 .contact-link:hover {
   color: #60a5fa;
+}
+
+.legal-link {
+  background: none;
+  color: #9ca3af;
+  font-size: var(--text-body-sm);
+  font-weight: 300;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  border: none;
+  padding: 0;
+}
+
+.legal-link:hover {
+  color: var(--grisfooter);
 }
   .footer-grid {
     grid-template-columns: 1fr;
