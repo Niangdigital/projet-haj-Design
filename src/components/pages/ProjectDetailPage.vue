@@ -852,6 +852,26 @@ const extractImageUrl = (imageString) => {
     font-size: 2.25rem;
   }
 
+  .description-secondary[data-v-b90fb4a7] {
+    font-size: var(--text-body-lg);
+    color: #666;
+    line-height: 1.8;
+}
+
+.timeline-date {
+    font-size: var(--text-body);
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.timeline-desc {
+    font-size: var(--text-body-lg);
+    color: #666;
+    line-height: 1.7;
+}
+
+
   .project-subtitle {
     font-size: 1.125rem;
   }

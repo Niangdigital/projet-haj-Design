@@ -66,7 +66,7 @@
                       <span class="separator">•</span>
                       <button class="legal-link">Politique de confidentialité</button>
                       <span class="separator">•</span>
-                      <button class="legal8-link">CGV</button>
+                      <button class="legal-link">CGV</button>
                     </div>
 
       </div>
