@@ -40,11 +40,39 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
 import { usePartnersStore } from '../stores/partnersStore';
 
 const partnersStore = usePartnersStore();
 const partners = partnersStore.getPartners();
 const config = partnersStore.getConfig();
+
+const carouselTrack = ref(null);
+const isPaused = ref(false);
+
+const handleTouchStart = () => {
+  isPaused.value = true;
+};
+
+const handleTouchEnd = () => {
+  isPaused.value = false;
+};
+
+onMounted(() => {
+  if (carouselTrack.value) {
+    carouselTrack.value.addEventListener('touchstart', handleTouchStart);
+    carouselTrack.value.addEventListener('touchend', handleTouchEnd);
+    carouselTrack.value.addEventListener('touchcancel', handleTouchEnd);
+  }
+});
+
+onUnmounted(() => {
+  if (carouselTrack.value) {
+    carouselTrack.value.removeEventListener('touchstart', handleTouchStart);
+    carouselTrack.value.removeEventListener('touchend', handleTouchEnd);
+    carouselTrack.value.removeEventListener('touchcancel', handleTouchEnd);
+  }
+});
 </script>
 
 <style scoped>

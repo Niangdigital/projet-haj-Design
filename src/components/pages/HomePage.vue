@@ -1205,7 +1205,7 @@ onUnmounted(() => {
 }
 
 .service-text p {
-  font-size: var(--text-body-sm);
+  font-size: var(--text-body);
   color: var(--text-light);
   line-height: 1.5;
 }
@@ -1414,6 +1414,11 @@ onUnmounted(() => {
   .trust-services {
     gap: 1.25rem;
   }
+  .service-text p{
+    font-size: var(--text-body);
+    color: var(--text-light);
+    line-height: 1.5;
+}
 
   .service-icon {
     width: 40px;

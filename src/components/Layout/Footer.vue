@@ -295,6 +295,66 @@ const nav = useNavigationStore();
     padding: 3rem 0rem 2rem;
   }
 
+  .social-link {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(96, 165, 250, 0.15);
+  color: #60a5fa;
+  border-radius: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--text-body-sm);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: rgba(96, 165, 250, 0.15);
+  border-color: #60a5fa;
+  color: #60a5fa;
+  transform: translateY(-0px);
+}
+
+.footer-title {
+  font-size: var(--text-body-lg);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.25rem;
+  color: var(--grisfooter);
+}
+
+.footer-links button {
+  background: none;
+  color:#60a5fa;
+  font-size: var(--text-body);
+  font-weight: 300;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+  border: none;
+}
+
+.footer-links button:hover {
+  color: #60a5fa;
+  transform: translateX(0px);
+}
+
+
+.contact-link {
+  color:#60a5fa;
+  font-size: var(--text-body);
+  font-weight: 300;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  line-height: 1.6;
+}
+
+.contact-link:hover {
+  color: #60a5fa;
+}
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
