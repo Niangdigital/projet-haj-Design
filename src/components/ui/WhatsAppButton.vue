@@ -42,7 +42,7 @@ const isHovered = ref(false);
   color: #000;
   padding: 0.875rem;
   min-width: 3.75rem;
-  height: 4rem;
+  height: 3.85rem;
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;

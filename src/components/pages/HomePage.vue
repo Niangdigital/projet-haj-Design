@@ -14,7 +14,7 @@
           Construction — Design d'Intérieur — Architecture — Maçonnerie
         </p>
         <button @click="nav.setPage('portfolio')" class="btn btn-primary btn-lg" style="animation-delay: 0.8s">
-          Découvrir nos projets
+          Découvrir nos réalisations
           <span class="btn-arrow">→</span>
         </button>
       </div>

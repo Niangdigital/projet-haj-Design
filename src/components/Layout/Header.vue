@@ -76,7 +76,7 @@ const headerClasses = computed(() => ({
 
 const pages = [
   { id: 'home', label: 'Accueil' },
-  { id: 'portfolio', label: 'Projets' },
+  { id: 'portfolio', label: 'Nos réalisations' },
   { id: 'about', label: 'À Propos' },
   { id: 'contact', label: 'Contact' }
 ];

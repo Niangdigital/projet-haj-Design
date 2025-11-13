@@ -17,7 +17,7 @@
           <h4 class="footer-title">Navigation</h4>
           <ul class="footer-links">
             <li><button @click="nav.setPage('home')">Accueil</button></li>
-            <li><button @click="nav.setPage('portfolio')">Projets</button></li>
+            <li><button @click="nav.setPage('portfolio')">Nos réalisations</button></li>
             <li><button @click="nav.setPage('about')">À Propos</button></li>
             <li><button @click="nav.setPage('contact')">Contact</button></li>
           </ul>
